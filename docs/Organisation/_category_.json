@@ -1,0 +1,8 @@
+{
+    "label": "Organisation",
+    "position": 2,
+    "link": {
+        "type": "generated-index",
+        "description": "All infos about the Organisation of our project"
+    }
+}
