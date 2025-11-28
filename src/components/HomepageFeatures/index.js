@@ -9,7 +9,7 @@ const FeatureList = [
     description: (
       <>
         Haptigation is our vision for intuitive, hands-free navigation. 
-        With wearable rizzbands or gloves equipped with vibration motors and Bluetooth, 
+        With wearable wristbands or gloves equipped with vibration motors and Bluetooth, 
         directions are delivered straight to your sense of touch — no screen, no sound, no hassle.
       </>
     ),
@@ -42,7 +42,7 @@ const FeatureList = [
     description: (
       <>
         Haptigation wearables are built to be <strong>comfortable, durable, and unobtrusive</strong>. 
-        Whether worn as rizzbands or integrated into gloves, they deliver clear haptic signals you can trust — 
+        Whether worn as wristbands or integrated into gloves, they deliver clear haptic signals you can trust — 
         all while staying lightweight and easy to forget you&apos;re even wearing them.
       </>
     ),
@@ -63,7 +63,7 @@ const FeatureList = [
     description: (
       <>
         Haptic cues give you discreet, real-time navigation. Feel every turn coming — 
-        even in noisy streets, bright sunlight, or while your phone stays in your pocket.
+        even in noisy streets or bright sunlight, all while your phone stays in your pocket.
       </>
     ),
   },
