@@ -11,7 +11,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Haptigation',
-  tagline: 'Find your way, eyes free',
+  tagline: 'Feel the right way.',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -138,7 +138,7 @@ const config = {
             ],
           },
           {
-            title: 'Community',
+            title: 'Docusaurus',
             items: [
               {
                 label: 'Stack Overflow',
@@ -155,20 +155,25 @@ const config = {
             ],
           },
           {
-            title: 'More',
+            title: 'References',
             items: [
               {
                 label: 'Team',
                 to: '/team',
               },
               {
+                label: 'Menti',
+                href: 'https://www.menti.com/alx5ib81p2uv',
+              },
+              {
                 label: 'GitHub',
                 href: 'https://github.com/facebook/docusaurus',
               },
+              
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Haptigation, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Haptigation. Built with Docusaurus.`,
       },
       prism: {
         theme: prismThemes.github,

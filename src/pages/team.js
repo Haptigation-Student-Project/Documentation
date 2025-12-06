@@ -5,7 +5,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 const members = [
   {
     name: 'Sanny64',
-    role: 'productmanager',
+    role: 'Project Lead',
     img: '/img/sanny.jpg',
     desc: `He doesn't just manage the roadmap; he embodies the product's vision.
     He acts as the project's central nervous system and actively clears the path for his team,
@@ -13,7 +13,7 @@ const members = [
   },
   {
     name: 'LightRay15',
-    role: 'productarchitect',
+    role: 'Event Manager',
     img: '/img/lightray.jpg',
     desc: `He doesn't just predict the future; he sketches it.
     To him, a product strategy isn't a spreadsheet of features,
@@ -22,7 +22,7 @@ const members = [
   },
   {
     name: 'josisleben',
-    role: 'designlead',
+    role: 'Design Lead',
     img: '/img/josis.jpg',
     desc: `She doesn't just create designs; she crafts experiences.
     Her work goes beyond aesthetics, focusing on how users feel and interact with the product.
@@ -30,7 +30,7 @@ const members = [
   },
   {
     name: 'Jack-gits-your-hub',
-    role: 'frontend-developer',
+    role: 'Frontend Developer',
     img: '/img/jack.jpg',
     desc: `Jack is our frontend wizard, turning complex designs into seamless user experiences.
     With a keen eye for detail and a passion for responsive design, he ensures our applications look stunning on any device.
@@ -38,7 +38,7 @@ const members = [
   },
   {
     name: 'Dave-Erge',
-    role: 'backend-developer',
+    role: 'Backend Developer',
     img: '/img/dave.jpg',
     desc: `Dave is the backbone of our development team, specializing in robust and scalable backend solutions.
     His expertise in clustered solutions ensures our systems run smoothly under pressure.
@@ -46,7 +46,7 @@ const members = [
   },
   {
     name: 'RoccoHB',
-    role: 'backend-developer',
+    role: 'Backend Developer',
     img: '/img/rocco.jpg',
     desc: `Rocco is a backend developer with a knack for optimizing server performance and database management.
     He is passionate about building efficient systems that can handle high traffic with ease.

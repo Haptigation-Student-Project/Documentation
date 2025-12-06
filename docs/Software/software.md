@@ -1,0 +1,15 @@
+---
+title: Overview
+description: Documentation about every software topic
+hide_table_of_contents: true
+sidebar_position: 1
+---
+
+# Software Documentation
+
+Our Software documentation is seperated into two segments:
+
+1. [Frontend](https://haptigation-student-project.github.io/Documentation/docs/category/frontend)
+2. [Google Apps Script](https://haptigation-student-project.github.io/Documentation/docs/category/google-apps-script)
+
+Both serve their own purpose, feel free to check them out!

@@ -16,12 +16,12 @@ function HomepageHeader() {
           {siteConfig.title}
         </Heading>
         <p className="hero__title">{siteConfig.tagline}</p>
-        <p className="hero__subtitle">Because looking up is better than looking at your phone.</p>
+        <p className="hero__subtitle">Haptic Navigation made real, for you to get around intuitively.</p>
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
             to="/docs/start">
-            Haptigation Documentation 👀
+            Check out our Documentation Pages
           </Link>
         </div>
       </div>

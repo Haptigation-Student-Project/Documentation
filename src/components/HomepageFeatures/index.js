@@ -30,9 +30,9 @@ const FeatureList = [
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Your wearable connects to your smartphone&apos;s navigation app. 
+        Your wearable connects to your smartphone&apos;s haptigation app. 
         When it&apos;s time to turn left, the left band vibrates. 
-        Time to go right? The right band responds. <b>It&apos;s simple, natural, and instantly understood.</b>
+        Time to go right? The right band vibrates. <b>It&apos;s simple, natural, and instantly understood.</b>
       </>
     ),
   },
@@ -42,7 +42,7 @@ const FeatureList = [
     description: (
       <>
         Haptigation wearables are built to be <strong>comfortable, durable, and unobtrusive</strong>. 
-        Whether worn as wristbands or integrated into gloves, they deliver clear haptic signals you can trust — 
+        As wristbands they deliver clear haptic signals you can trust — 
         all while staying lightweight and easy to forget you&apos;re even wearing them.
       </>
     ),
@@ -58,12 +58,13 @@ const FeatureList = [
     ),
   },
   {
-    title: 'A new layer of awareness',
+    title: 'Where we\'re at',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Haptic cues give you discreet, real-time navigation. Feel every turn coming — 
-        even in noisy streets or bright sunlight, all while your phone stays in your pocket.
+        Currently, Haptigation is in the prototyping stage.
+        We&apos;re aiming to build a functional prototype to test it with real users.
+        Once we validate the concept, we plan to refine the design, make it more compact and launch it to the public. 
       </>
     ),
   },
