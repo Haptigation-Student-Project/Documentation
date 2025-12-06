@@ -121,19 +121,19 @@ const config = {
             items: [
               {
                 label: 'Start',
-                to: '/docs/start',
+                to: 'docs/start',
               },
               {
                 label: 'Organisation',
-                to: '/docs/category/organisation',
+                to: 'docs/category/general-info',
               },
               {
                 label: 'Hardware',
-                to: '/docs/hardware',
+                to: 'docs/category/hardware',
               },
               {
                 label: 'Software',
-                to: '/docs/software',
+                to: 'docs/category/software',
               },
             ],
           },

@@ -2,7 +2,7 @@
 title: Newsletter Automation
 description: Documentation on the Newsletter Automation logic via Google Apps Script
 hide_table_of_contents: true
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 # Newsletter Automation
@@ -59,9 +59,7 @@ If users [NAME] is "" or "unbekannt" [NAME] will be replaced with "LeserIn" inst
 
 Replace the CONFIG variables with your actual values:
 
-```
-javascript
-
+```javascript
 const CONFIG = {
   contactLabel: "Newsletter Subscriber",  // The label of your newsletter contacts
   emailSubject: "{Enter your subject}",   // This replaces the draft's subject
@@ -171,10 +169,25 @@ Only authorized personnel should access this script
 Always keep testMode: true when not actively sending
 Use contactLabel: "safetyFirst" as default to prevent accidental sends
 
+---
+
 ## Contact Management
 DO NOT manually edit contacts - designated personnel will maintain contact data integrity. 
 
 If you do please consider all consequences of your action (e.g. false names, accidentally unsubscribing newsletters, etc.)
+
+---
+
+## How to create a well formated email
+- Get yourself a html file that represents your newsletter (Can use AI, [Topol](https://topol.io/) or something alike). 
+- It can have in-line styling , links, buttons, pictures, whatever you like (besides emojis for some reason)
+- Save your html file and open it in your browser by clicking it twice from your file explorer (Use Chrome)
+- If your on the page click CTRL + A and then CTRL + C (It might look like it's only copying text but it isn't) 
+- In your gmail draft click CTRL + V 
+  - The styling should appear automatically
+- Use the script as described
+
+---
 
 ## Support
 If you encounter issues:

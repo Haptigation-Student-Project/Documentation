@@ -50,8 +50,7 @@ Go to [Google Apps Script](https://script.google.com)
 ### Step 3: Configure Settings (Optional)
 You can customize the CONFIG settings at the top of the script:
 
-```
-javascript
+```javascript
 const CONFIG = {
   DRAFT_SUBJECT: 'E-Mail Response Automation Draft - DO NOT DELETE',  // Draft subject (must match exactly)
   REPLY_SUBJECT: 'Re: ',                                              // Reply subject prefix
@@ -78,7 +77,7 @@ Click the disk icon (💾) or press Ctrl+S / Cmd+S to save your changes.
 In the function dropdown (top center), select "setupTrigger"
 Click the Run button (▶️)
 
-<img width="1223" height="141" alt="run function" src="https://github.com/user-attachments/assets/1fa2cedf-4218-4e49-bcb0-c0d7946974e2" />
+<img width="1223" height="141" alt="run function setup" src="https://github.com/user-attachments/assets/1fa2cedf-4218-4e49-bcb0-c0d7946974e2" />
 
 On first run, authorize the script:
 
@@ -130,16 +129,22 @@ Prevents duplicates: Once labeled, the script won't respond again to that email
 In Google Apps Script, click the clock icon (⏰) in the left sidebar
 You should see "autoResponseToEmails" listed with its schedule
 
+<img width="366" height="406" alt="trigger icon" src="https://github.com/user-attachments/assets/e68ba06e-6fba-4c1f-a721-9042d59b4796" />
+
 ### Temporarily Disable
 
 Select "removeTrigger" from the function dropdown
 Click Run (▶️)
 Verify in execution log: "Trigger entfernt"
 
+<img width="1227" height="137" alt="run function remove" src="https://github.com/user-attachments/assets/21a86e3f-8425-453f-9fb3-1490296bdf72" />
+
 ### Re-Enable
 
 Select "setupTrigger" from the function dropdown
 Click Run (▶️)
+
+<img width="1223" height="141" alt="run function setup" src="https://github.com/user-attachments/assets/1fa2cedf-4218-4e49-bcb0-c0d7946974e2" />
 
 ### Update Response Message
 
@@ -228,8 +233,8 @@ Be mindful of Gmail's daily sending limits
 ## Advanced Features
 Mark Emails as Read (Optional)
 Uncomment this line in the script:
-```
-javascript
+
+```javascript
 // latestMessage.markRead();
 ```
 Remove the // to enable auto-marking as read.
