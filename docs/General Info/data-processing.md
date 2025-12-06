@@ -56,7 +56,7 @@ In both cases your email is never leaked to anyone without access to the haptiga
 
 The email distributor is programmed in a way so the newsletter addresses you directly instead of all of the distributor members at once.
 
-For more information check out the detailed [Documentation](https://haptigation-student-project.github.io/Documentation/docs/category/google-apps-script). There everything is explained in precisely.
+For more information check out the detailed [Documentation](https://haptigation-student-project.github.io/Documentation/docs/category/google-apps-script). There everything is explained precisely.
 
 Your **survey data** is processed manually. 
 
