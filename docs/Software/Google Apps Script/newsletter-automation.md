@@ -169,10 +169,14 @@ Only authorized personnel should access this script
 Always keep testMode: true when not actively sending
 Use contactLabel: "safetyFirst" as default to prevent accidental sends
 
+---
+
 ## Contact Management
 DO NOT manually edit contacts - designated personnel will maintain contact data integrity. 
 
 If you do please consider all consequences of your action (e.g. false names, accidentally unsubscribing newsletters, etc.)
+
+---
 
 ## How to create a well formated email
 - Get yourself a html file that represents your newsletter (Can use AI, [Topol](https://topol.io/) or something alike). 
@@ -182,6 +186,8 @@ If you do please consider all consequences of your action (e.g. false names, acc
 - In your gmail draft click CTRL + V 
   - The styling should appear automatically
 - Use the script as described
+
+---
 
 ## Support
 If you encounter issues:
