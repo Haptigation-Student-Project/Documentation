@@ -41,9 +41,9 @@ Create a new draft in Gmail with your deletion confirmation (supports HTML forma
 Confirm User Data Deletion Draft - DO NOT DELETE
 ```
 **Personalization:**
-- Use `{{EMAIL}}` as a placeholder in the text
+- Use `&#123;&#123;EMAIL&#125;&#125;` as a placeholder in the text
 - It will be automatically replaced by the actual email address
-- Example: "Your data for {{EMAIL}} has been fully deleted."
+- Example: "Your data for &#123;&#123;EMAIL&#125;&#125; has been fully deleted."
 **Inline images:**
 - Insert images directly in the draft (not as separate attachments)
 - The script will automatically include all inline images
@@ -55,12 +55,13 @@ Confirm User Data Deletion Draft - DO NOT DELETE
 Open the script and adjust the CONFIG settings:
 
 ```javascript
-{
-  DEBUG_MODE: false,                   // Set to true only for testing!
-  MAX_THREADS_PER_BATCH: 500,          // Threads per batch deletion (This is max. already)
-  EMAIL: "example@gmail.com",          // Email to be deleted
-  TESTMAIL: "test@gmail.com",          // Test email for test runs
-  FINAL_EMAIL_SUBJECT: 'We have deleted your user data'
+const CONFIG = {
+  DEBUG_MODE: false, // Set to true for full email display in logs
+  MAX_THREADS_PER_BATCH: 500, // Maximum number of threads per batch deletion
+  EMAIL: "beispiel@gmail.com", // Replace with the real email to be deleted
+  TESTMAIL: "test@gmail.com", // Replace with the real email you want to test with
+  DRAFT_SUBJECT: 'Confirm User Data Deletion Draft - DO NOT DELETE', // Draft subject in Gmail
+  FINAL_EMAIL_SUBJECT: 'Wir haben ihre Nutzerdaten gelöscht', // Subject of the sent email
 };
 ```
 **Settings explained:**
@@ -77,12 +78,14 @@ Click the save icon (💾) or press Ctrl+S / Cmd+S
 ### Step 4: Set email address
 **IMPORTANT:** Before each execution, the email address to be deleted must be set in CONFIG:
 
+```javascript
 EMAIL: "user@example.com"  // Replace with the real email
 ```
 **Safety check:**
 - The script checks whether a valid email address has been provided
 - If the email is missing or invalid, execution is aborted
 - 3-second warning before starting the deletion process
+
 ### Step 5: Start deletion process
 Choose "deleteByEmail" in the function dropdown (top center)
 Click the Run button (▶️)
@@ -118,7 +121,7 @@ Administrator runs `deleteByEmail()`
 The script performs the following steps:
 **Step 1: Send confirmation email**
 - Draft with subject "Confirm User Data Deletion Draft - DO NOT DELETE" is searched
-- `{{EMAIL}}` placeholder is replaced with the actual email
+- `&#123;&#123;EMAIL&#125;&#125;` placeholder is replaced with the actual email
 - Email with HTML formatting and inline images is sent
 - On error: warning in log, but deletion continues
  
@@ -156,6 +159,7 @@ All email addresses are automatically anonymized in logs:
 - Can be disabled in debug mode (testing only!)
  
 **Anonymization format:**
+```javascript
 // Standard (DEBUG_MODE: false)
 "max.mustermann@gmail.com" → "m...@g....com"
 // Debug mode (DEBUG_MODE: true)
@@ -173,7 +177,9 @@ This script helps comply with the "Right to be forgotten":
 - Auditable compliance
 ### Debug mode
 **ENABLE ONLY FOR TESTING:**
+```javascript
 DEBUG_MODE: true  // Shows full emails in logs
+```
 **IMPORTANT:** Set back to `false` after testing!
 
 ---
@@ -194,7 +200,7 @@ Click Run (▶️)
 Check the log for success messages
 Verify in your inbox:
 - Email received?
-- `{{EMAIL}}` placeholder replaced?
+- `&#123;&#123;EMAIL&#125;&#125;` placeholder replaced?
 - HTML formatting correct?
 - Inline images visible?
 ### 3. List contacts
@@ -222,7 +228,9 @@ MAX_THREADS_PER_BATCH: 250
 ```
 ### Change confirmation email subject
 Change `FINAL_EMAIL_SUBJECT` in CONFIG:
+```javascript
 FINAL_EMAIL_SUBJECT: 'Your data has been deleted'
+```
 
 **IMPORTANT:** Do NOT change `DRAFT_SUBJECT` - must be exact!
 ### Enable debug mode
@@ -255,7 +263,7 @@ Watch for spaces and typos
 Make sure the draft hasn't been accidentally deleted
 ### "Confirmation email could not be sent"
 Check the draft subject (see above)
-Ensure the `{{EMAIL}}` placeholder is present in the draft
+Ensure the `&#123;&#123;EMAIL&#125;&#125;` placeholder is present in the draft
 Verify Gmail permissions
 **Note:** Deletion will continue regardless
 ### No contacts found
@@ -465,7 +473,7 @@ from:[email] OR to:[email]
 ### Sub-functions
 **sendConfirmationEmail(email)**
 - Searches draft template
-- Replaces `{{EMAIL}}` placeholder
+- Replaces `&#123;&#123;EMAIL&#125;&#125;` placeholder
 - Processes inline images
 - Sends email
 **deleteContactsByEmail(email)**
