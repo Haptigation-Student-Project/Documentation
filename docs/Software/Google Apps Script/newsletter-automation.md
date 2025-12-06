@@ -2,7 +2,7 @@
 title: Newsletter Automation
 description: Documentation on the Newsletter Automation logic via Google Apps Script
 hide_table_of_contents: true
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 # Newsletter Automation
@@ -59,9 +59,7 @@ If users [NAME] is "" or "unbekannt" [NAME] will be replaced with "LeserIn" inst
 
 Replace the CONFIG variables with your actual values:
 
-```
-javascript
-
+```javascript
 const CONFIG = {
   contactLabel: "Newsletter Subscriber",  // The label of your newsletter contacts
   emailSubject: "{Enter your subject}",   // This replaces the draft's subject
