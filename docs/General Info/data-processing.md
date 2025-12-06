@@ -56,8 +56,10 @@ In both cases your email is never leaked to anyone without access to the haptiga
 
 The email distributor is programmed in a way so the newsletter addresses you directly instead of all of the distributor members at once.
 
-For detailed information check out our [Github](https://github.com/Haptigation-Student-Project/Google-Apps-Script). There everything is explained in detail.
+For more information check out the detailed [Documentation](https://haptigation-student-project.github.io/Documentation/docs/category/google-apps-script). There everything is explained in precisely.
 
-Your **survey data** is processed manually. We take our time and see for trends and ideas by hand. 
+Your **survey data** is processed manually. 
 
-No AI will see what intel you gave us anonymously.
+We take our time and see whether we can find any opinion trends or ideas from you by hand. 
+
+No AI will see what informations you gave us anonymously.
