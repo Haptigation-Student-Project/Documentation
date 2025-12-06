@@ -1,13 +1,22 @@
 ---
 title: Task-Management
-sidebar_position: 2
+sidebar_position: 3
+description: "A little bit of insights into our Task Management Structure."
+---
+# Method of working
+We decided to go for some sort of Scrumban a mixture of Scrum and Kanban.
+
+We seperated ourselves into hardware and software sub-teams based on interested. 
+
+Leadership tasks and work processes are managed by:
+- Patrick: Event Manager (Scrum Master)
+- Sanny: Project Lead (Product Owner)
+
+Decisions are made with the entire team. We don't allow autoritarism :)
+
 ---
 
 # Task-Management
+Our tasks are managed via [Github Projects](https://github.com/Haptigation-Student-Project/Documentation/issues).
 
-This page shows the distribution of the tasks in the following table:
-
-| Task      | Task Id     | authorised Person     | finished      |
-|-----------|-------------|-----------------------|---------------|
-|           |             |                       |               |
-|           |             |                       |               |
+It might be private due to confidentiality constraints.

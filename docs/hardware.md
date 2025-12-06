@@ -7,4 +7,6 @@ sidebar_position: 3
 
 # Hardware Documentation
 
-How are you
+The Hardware Documentation is coming as soon as we have intel to share with you :)
+
+Stay tuned!!
