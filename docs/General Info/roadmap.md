@@ -4,7 +4,8 @@ sidebar_position: 4
 description: "The roadmap can give you a broad overview on what happens when."
 ---
 
-# Sprint Structure
+# Roadmap
+
 ## Time Plan
 ![Time Planning](/img/timeplan.png)
 

@@ -44,7 +44,9 @@ Haptigation provides a third modality for navigation through tactile feedback:
 - **Intuitive Feedback:** Simple vibration patterns indicate direction
 - **Hands-Free Operation:** No need to look at screens or listen to audio
 
-### Target Groups
+---
+
+## Target Groups
 
 **Primary Target:** Cyclists and Bikers
 - Largest addressable market

@@ -1,8 +1,8 @@
 ---
-title: Hardware
+title: Overview
 description: documentation about every Hardware topic
 hide_table_of_contents: true
-sidebar_position: 3
+sidebar_position: 1
 ---
 
 # Hardware Documentation
