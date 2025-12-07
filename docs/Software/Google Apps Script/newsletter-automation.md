@@ -16,14 +16,14 @@ You can find it here: [Github](https://github.com/Haptigation-Student-Project/Go
 ---
 
 ## Prerequisites
-**1. Enable Gmail API Access**
+### 1. Enable Gmail API Access
 
-- Go to https://script.google.com
+- Go to [Google Apps Script](https://script.google.com)
 - Open your project (or create a new one)
 - Click on the Services icon (⊕) in the left sidebar
 - Find Gmail API and click Add
 
-**2. Enable People API**
+### 2. Enable People API
 
 - In the same Google Apps Script project
 - Click on the Services icon (⊕) in the left sidebar
@@ -31,7 +31,7 @@ You can find it here: [Github](https://github.com/Haptigation-Student-Project/Go
 - Click Add to enable it
 - This allows the script to access your Gmail contacts and labels
 
-**3. Gmail Settings (if needed)**
+### 3. Gmail Settings (if needed)
 
 - Check if in your gmail account setting IMAP is enabled.
 - Ensure that "Allow less secure apps" is NOT required for Google Apps Script (it runs with your Google account permissions)
@@ -40,14 +40,16 @@ You can find it here: [Github](https://github.com/Haptigation-Student-Project/Go
 ---
 
 ## Setup Instructions
-**Step 1:** Access Gmail and Google Apps Script
+### Step 1: Access Gmail and Google Apps Script
 
 Open [Gmail](https://mail.google.com) and [Google Apps Script](https://script.google.com/home) for your account.
 
-**Step 2:** Create Newsletter Draft in Gmail
+### Step 2: Create Newsletter Draft in Gmail
 
 In Gmail, create a new email draft containing your complete newsletter content
-IMPORTANT: The subject line MUST include "Haptigation Newsletter" somewhere (e.g., "Haptigation Newsletter - December 2025")
+
+#### IMPORTANT: 
+The subject line MUST include ```Haptigation Newsletter``` somewhere (e.g., "Haptigation Newsletter - December 2025")
 
 Use [NAME] as a placeholder where you want the recipient's name to appear.
 
@@ -55,7 +57,7 @@ If users [NAME] is "" or "unbekannt" [NAME] will be replaced with "LeserIn" inst
 
 **DO NOT SEND - Save as draft only**
 
-**Step 3:** Configure Settings
+### Step 3: Configure Settings
 
 Replace the CONFIG variables with your actual values:
 
@@ -68,41 +70,44 @@ const CONFIG = {
 };
 ```
 
-**Step 4:** Save the Script
+### Step 4: Save the Script
 Click the disk icon (💾) or press Ctrl+S / Cmd+S to save your changes.
 
 <img width="1227" height="134" alt="image" src="https://github.com/user-attachments/assets/d5c373b4-24ea-4bc5-aea0-cbb9c12048b4" />
 
-**Step 5:** Run the Script
+### Step 5: Run the Script
 
 In the function dropdown (top center), select "sendNewsletter"
+
 Click the Run button (▶️) to the left
 
 <img width="1227" height="144" alt="image" src="https://github.com/user-attachments/assets/d0c9576f-31a4-489e-b2e4-4e1a9b0df6c7" />
 
 On first run, you'll need to authorize the script:
 
-Click "Review permissions"
-Select your Google account
-Click "Advanced" → "Go to [Project Name] (unsafe)"
-Click "Allow"
+1. Click "Review permissions"
+2. Select your Google account
+3. Click "Advanced" → "Go to [Project Name] (unsafe)"
+4. Click "Allow"
 
-**Step 6:** Reset Safety Settings
+### Step 6: Reset Safety Settings
 After successful sending:
 
-Change testMode back to true
-Change contactLabel back to "safetyFirst"
-This prevents accidental sends
+- Change testMode back to true
+- Change contactLabel back to "safetyFirst"
+- This prevents accidental sends
 
-**Step 7:** Save Again
+### Step 7: Save Again
 Click the disk icon (💾) or press Ctrl+S / Cmd+S to save your changes.
 
 <img width="1227" height="134" alt="image" src="https://github.com/user-attachments/assets/d5c373b4-24ea-4bc5-aea0-cbb9c12048b4" />
 
-**Step 8:** Cleanup
+### Step 8: Cleanup
 
 Verify the newsletter was sent successfully (check your Sent folder)
-Delete the draft or modify its subject to NOT include "Haptigation Newsletter"
+
+Delete the draft or modify its subject to NOT include ```Haptigation Newsletter```
+
 You can restore the subject line when preparing the next newsletter edition
 
 ---
@@ -115,7 +120,7 @@ Use [NAME], [Name], or [name] in your draft
 
 Recipients with stored names: "Hallo [NAME]" → "Hallo Max"
 
-Recipients marked as "unknown" or empty: "Hallo [NAME]" → "Hallo LeserIn"
+Recipients with stored name "unbekannt" or empty: "Hallo [NAME]" → "Hallo LeserIn"
 
 ### Test Mode
 When testMode: true, the script only sends to your own email address for testing.
@@ -125,49 +130,49 @@ The script automatically pauses every 50 emails for one cycle (default 1min) to 
 
 ### Helpful Functions
 **Check Your Contacts**
-Before sending, verify your contacts:
-In the function dropdown, select "showContacts" and click Run
+- Before sending, verify your contacts:
+  - In the function dropdown, select **"showContacts"** and click Run
 
 **List All Contact Groups**
-To see all available contact labels:
-In the function dropdown, select "listAllContactGroups" and click Run
+- To see all available contact labels:
+  - In the function dropdown, select **"listAllContactGroups"** and click Run
 
 ---
 
 ## Troubleshooting
 ### "No Newsletter Draft Found"
 
-Ensure your draft's subject contains "Haptigation Newsletter"
-Check the execution log for available draft subjects
+- Ensure your draft's subject contains "Haptigation Newsletter"
+- Check the execution log for available draft subjects
 
 ### "No Contacts Found"
 
-Verify the contact label name matches exactly
-Ensure contacts have the specified label in Gmail Contacts
-Check that People API is enabled
+- Verify the contact label name matches exactly
+- Ensure contacts have the specified label in Gmail Contacts
+- Check that People API is enabled
 
 ### "Permission Denied"
 
-Re-run authorization process
-Ensure Gmail API and People API are both enabled in Services
+- Re-run authorization process
+- Ensure Gmail API and People API are both enabled in Services
 
 ### Daily Sending Limits
 
-Regular Gmail: 500 emails/day
-Google Workspace: 2,000 emails/day
-If you exceed limits, wait 24 hours
+- Regular Gmail: 500 emails/day
+- Google Workspace: 2,000 emails/day
+- If you exceed limits, wait 24 hours
 
 ---
 
 ## Security & Data Protection
 **⚠️ CRITICAL - READ CAREFULLY:**
 
-You are working with sensitive personal data
-Contact information MUST NOT be shared outside your organization
-Never export or share contact lists
-Only authorized personnel should access this script
-Always keep testMode: true when not actively sending
-Use contactLabel: "safetyFirst" as default to prevent accidental sends
+- You are working with sensitive personal data
+- Contact information MUST NOT be shared outside your organization
+- Never export or share contact lists
+- Only authorized personnel should access this script
+- Always keep testMode: true when not actively sending
+- Use contactLabel: "safetyFirst" as default to prevent accidental sends
 
 ---
 
@@ -205,13 +210,12 @@ Also please include the links to our [Docusaurus](https://haptigation-student-pr
 ## Support
 If you encounter issues:
 
-Check the Execution log (View → Logs or Ctrl+Enter)
-Verify all configuration settings
-Ensure APIs are enabled
-Test with testMode: true first
+- Check the Execution log (View → Logs or Ctrl+Enter)
+- Verify all configuration settings
+- Ensure APIs are enabled
+- Test with testMode: true first
 
 ---
-
-Last Updated: December 2025
+Last updated: December 07, 2025
 
 Version: 1.0

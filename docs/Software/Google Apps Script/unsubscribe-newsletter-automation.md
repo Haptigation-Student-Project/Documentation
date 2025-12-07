@@ -262,62 +262,40 @@ Appears as the sender of the confirmation email
 
 ## Troubleshooting
 ### "No Contact Groups found"
-
-Check if you have enabled the People API
-
-Make sure you have at least one Contact Group in Google Contacts
-
-Check that `contactLabel` exactly matches your label (case-sensitive!)
+- Check if you have enabled the People API
+- Make sure you have at least one Contact Group in Google Contacts
+- Check that `contactLabel` exactly matches your label (case-sensitive!)
 
 ### "Label not found"
-
-Go to Google Contacts and create the label manually
-
-The name must exactly match `contactLabel` in CONFIG
-
-Run `listNewsletterContacts()` to see available labels
+- Go to Google Contacts and create the label manually
+- The name must exactly match `contactLabel` in CONFIG
+- Run `listNewsletterContacts()` to see available labels
 
 ### "No draft found"
-
-Ensure the draft subject is exact: `Unsubscribe Newsletter Draft - DO NOT DELETE`
-
-Watch for spaces and typos
-
-Make sure the draft hasn't been accidentally deleted
+- Ensure the draft subject is exact: `Unsubscribe Newsletter Draft - DO NOT DELETE`
+- Watch for spaces and typos
+- Make sure the draft hasn't been accidentally deleted
 
 ### No confirmation email received
-
-Check the spam folder
-
-Verify the email address in the test run
-
-Ensure the draft is correctly formatted
-
-Enable `debugMode: true` for detailed logs
+- Check the spam folder
+- Verify the email address in the test run
+- Ensure the draft is correctly formatted
+- Enable `debugMode: true` for detailed logs
 
 ### "Contact not found in newsletter list"
-
-Email must match exactly (case-insensitive)
-
-Contact must be in the specified Contact Group
-
-Run `listNewsletterContacts()` to see all members
-
-Check if the contact has multiple email addresses
+- Email must match
+- Contact must be in the specified Contact Group
+- Run `listNewsletterContacts()` to see all members
+- Check if the contact has multiple email addresses
 
 ### Form response not deleted
-
-Ensure `formID` in CONFIG is correct
-
-Check if the script has permissions for the form
-
-Not critical - unsubscribe still works
+- Ensure `formID` in CONFIG is correct
+- Check if the script has permissions for the form
+- Not critical - unsubscribe still works
 
 ### Images not appearing in email
-
-Images must be embedded via URL (not as file attachments)
-
-Gmail sometimes blocks inline images - recipients may need to click "Show images"
+- Images must be embedded via URL (not as file attachments)
+- Gmail sometimes blocks inline images - recipients may need to click "Show images"
 
 ---
 
@@ -381,6 +359,6 @@ Create a backup of your confirmation draft
 
 ---
 
-Last updated: December 2025
+Last updated: December 07, 2025
 
 Version: 1.0

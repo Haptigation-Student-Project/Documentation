@@ -8,7 +8,7 @@ description: "Here we would like to give you an overview of the entire project."
 
 ## Overview
 
-Haptigation is an innovative **haptic navigation system** designed to provide turn-by-turn directions through vibration feedback, allowing users to navigate without relying on visual or auditory cues. The system consists of two **vibration wristbands** paired with a mobile application, offering an **intuitive and accessible navigation** solution for bikers, cyclists, blind/deaf persons and other users who need their eyes and ears free for safety-critical tasks.
+Haptigation is a **haptic navigation system** designed to provide turn-by-turn directions through vibration feedback, allowing users to navigate without relying on visual or auditory cues. The system consists of two **vibration wristbands** paired with a mobile application, offering an **intuitive and accessible navigation** solution for bikers, cyclists, visually and hearing impaired persons and other users who need their eyes and ears free for safety-critical tasks while navigating.
 
 **Core Concept:** "Buzz left, go left. Buzz right, go right."
 
@@ -28,7 +28,8 @@ Modern navigation systems present significant safety challenges in certain conte
 
 Cyclists and bikers, in particular, face a dangerous dilemma: they need navigation guidance while simultaneously requiring complete visual and auditory awareness of their surroundings. Current solutions force users to compromise their safety by diverting attention to screens or blocking environmental sounds with headphones.
 
-Blind and deaf people, have a special challange in navigating as well: 
+Visually and hearing impaired individuals have a special challenge in navigating as well: 
+
 They often require external help, which we can partially provide.
 
 ---
@@ -37,7 +38,7 @@ They often require external help, which we can partially provide.
 
 ### Haptic Navigation System
 
-Haptigation provides a third modality for navigation through tactile feedback:
+Haptigation provides a third modality for navigation through haptic feedback:
 
 - **Two Vibration Wristbands:** Bilateral system worn on both wrists
 - **Mobile Application:** Route planning and navigation engine (running with google maps)
@@ -201,17 +202,15 @@ Compared to existing solutions like Wayband (Wear Works):
 
 ## Data Usage
 
-We are small student project and no enterprise. 
+We are not interested in harming you in any way.
 
-We are not interested in harming you in any form. 
+Therefore we will do everything in our power to secure your data.
 
-Therefore your data will be only used for the purpose you gave it to us.
+If you wish to have your data removed contact us at **haptigation@gmail.com**
 
-We are located in Germany and therefore bound to the [Datenschutz-Grundverordnung](https://dsgvo-gesetz.de).
+We will do so immediately.
 
-If you send us a message, that you want your mail address deleted from our database we will do so immediately.
-
-Your email is being saved and processed in Google Contacts.
+If you want more info on how we process your data please see our detailed [Documentation](https://haptigation-student-project.github.io//Documentation/docs/General%20Info/data-usage).
 
 ## Contact
 
