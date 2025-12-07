@@ -210,7 +210,7 @@ If you wish to have your data removed contact us at **haptigation@gmail.com**
 
 We will do so immediately.
 
-If you want more info on how we process your data please see our detailed [Documentation](https://haptigation-student-project.github.io//Documentation/docs/General%20Info/data-usage).
+If you want more info on how we process your data please see our detailed [Documentation](https://haptigation-student-project.github.io/Documentation/docs/General%20Info/data-usage).
 
 ## Contact
 
