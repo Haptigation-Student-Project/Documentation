@@ -240,7 +240,6 @@ Uncomment this line in the script:
 Remove the // to enable auto-marking as read.
 
 ---
-
-Last Updated: December 2025
+Last updated: December 07, 2025
 
 Version: 1.0

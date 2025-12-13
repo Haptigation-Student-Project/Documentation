@@ -1,11 +1,11 @@
 ---
-title: Task-Management
+title: Task Management
 sidebar_position: 3
 description: "A little bit of insights into our Task Management Structure."
 
 ---
 
-# Task-Management
+# Task Management
 Our tasks are managed via [Github Projects](https://github.com/Haptigation-Student-Project/Documentation/issues).
 
 It might be private due to confidentiality constraints.
