@@ -10,6 +10,6 @@ This documentation repository serves as the main source of shared knowledge for 
 
 Here we want to collect:
 
-- [General informations](https://haptigation-student-project.github.io/Documentation/docs/category/general-info)
-- [Hardware site documentation](https://haptigation-student-project.github.io/Documentation/docs/category/hardware)
-- [Software site documentation](https://haptigation-student-project.github.io/Documentation/docs/category/software)
+- [General informations](/docs/category/general-info)
+- [Hardware site documentation](/docs/category/hardware)
+- [Software site documentation](/docs/category/software)

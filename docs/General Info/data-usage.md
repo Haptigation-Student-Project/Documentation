@@ -51,10 +51,10 @@ Our data gathering has two purposes:
 
 In [Google Apps Script](https://script.google.com) we take the data above to do four things:
 
-1. Automatic email acknowledgement responses.               -> Find detailed info here: [Documentation](https://haptigation-student-project.github.io/Documentation/docs/Software/Google%20Apps%20Script/email-acknowledgement-automation)
-2. Sending you the newsletter.                              -> Find detailed info here: [Documentation](https://haptigation-student-project.github.io/Documentation/docs/Software/Google%20Apps%20Script/newsletter-automation)
-3. Unsubscribing you from the newsletter.                   -> Find detailed info here: [Documentation](https://haptigation-student-project.github.io/Documentation/docs/Software/Google%20Apps%20Script/unsubscribe-newsletter-automation)
-4. Delete all user related data from our Google systems.    -> Find detailed info here: [Documentation](https://haptigation-student-project.github.io/Documentation/docs/Software/Google%20Apps%20Script/user-data-deletion-automation)
+1. Automatic email acknowledgement responses.               -> Find detailed info here: [Documentation](/docs/Software/Google%20Apps%20Script/email-acknowledgement-automation)
+2. Sending you the newsletter.                              -> Find detailed info here: [Documentation](/docs/Software/Google%20Apps%20Script/newsletter-automation)
+3. Unsubscribing you from the newsletter.                   -> Find detailed info here: [Documentation](/docs/Software/Google%20Apps%20Script/unsubscribe-newsletter-automation)
+4. Delete all user related data from our Google systems.    -> Find detailed info here: [Documentation](/docs/Software/Google%20Apps%20Script/user-data-deletion-automation)
 
 In all cases your email is never leaked to anyone without access to the haptigation@gmail.com account.
 

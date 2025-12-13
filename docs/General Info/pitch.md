@@ -190,7 +190,7 @@ Compared to existing solutions like Wayband (Wear Works):
 
 **Current Stage:** Validating User Feedback from [Menti Surveys](https://www.menti.com/alx5ib81p2uv)
 
-**Future Steps:** Please check out our [Roadmap](https://haptigation-student-project.github.io/Documentation/docs/Organisation/roadmap) for additional infos.
+**Future Steps:** Please check out our [Roadmap](/docs/General Info/roadmap) for additional infos.
 
 **Team Characteristics:**
 - Agile development methodology
@@ -210,7 +210,7 @@ If you wish to have your data removed contact us at **haptigation@gmail.com**
 
 We will do so immediately.
 
-If you want more info on how we process your data please see our detailed [Documentation](https://haptigation-student-project.github.io/Documentation/docs/General%20Info/data-usage).
+If you want more info on how we process your data please see our detailed [Documentation](/docs/General%20Info/data-usage).
 
 ## Contact
 

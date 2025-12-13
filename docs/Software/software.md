@@ -9,7 +9,7 @@ sidebar_position: 1
 
 Our Software documentation is seperated into two segments:
 
-1. [Frontend](https://haptigation-student-project.github.io/Documentation/docs/category/frontend)
-2. [Google Apps Script](https://haptigation-student-project.github.io/Documentation/docs/category/google-apps-script)
+1. [Frontend](/docs/category/frontend)
+2. [Google Apps Script](/docs/category/google-apps-script)
 
 Both serve their own purpose, feel free to check them out!
