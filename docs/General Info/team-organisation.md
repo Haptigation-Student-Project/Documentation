@@ -1,0 +1,74 @@
+---
+title: Team Organisation
+sidebar_position: 5
+description: "Info and Guidelines on how we organise ourself as a team"
+
+---
+
+# Team Organisation
+
+The Team will be working with a Scrumban(-like?) Framework to organize the work within the team. Unlike pure Scrum, this will allow us to more flexibly work on our project and lower the overhead of regular meetings.
+
+We still want to work within sprint timeframes so we can better measure and document process, as documentation will be part of our final grade. These sprints will not have a defined goal, again to keep flexible in the context of a university project.
+## Meetings
+
+There will be regular meetings each week to sync the team and eliminate any roadblocks.
+Unlike in Scrum, there won't be a dedicated Retro, Review or Planning. Still, we will discuss similar things in our weekly meeting to ensure smooth working in the team.
+
+In accordance with our timetable, these meetings will last 1 - 1,5h
+## Guidelines
+
+### Estimate
+
+Estimates will not be mandatory when creating Issues. However, it is encouraged to help judge the amount of work for a given task. This will ensure that nobody is hoarding work and possibly impeding progress.
+
+The following table will aid in assigning an estimate (in Story Points) to our issues:
+
+| **Story Points (SP)** | **Estimate Type** | **Rough Time Equivalence** | **Why This Estimate?**                                                                                                |
+| --------------------- | ----------------- | -------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| **1**                 | **Trivial**       | $\le 1 \text{ hour}$       | Small fix, minor documentation update, simple research query.                                                         |
+| **2**                 | **Easy**          | $\sim 2 \text{ hours}$     | Simple code integration, small bug fix, assembling one sub-component.                                                 |
+| **3**                 | **Small**         | $\sim 1/2 \text{ Day}$     | Implementing a basic function, drafting a schematic, writing a user story. **Your baseline task.**                    |
+| **5**                 | **Medium**        | $\sim 1 \text{ Full Day}$  | Developing a major software module, initial PCB layout, complex hardware assembly.                                    |
+| **8**                 | **Large**         | $\sim 1.5-2 \text{ Days}$  | Integrating two major systems (HW $\leftrightarrow$ SW), implementing a complex algorithm. **Should be broken down.** |
+| **13**                | **Epic/Too Big**  | $> 2 \text{ Days}$         | A massive component or feature. **MUST be immediately split** into smaller tasks (e.g., into one '5' and two '3's).   |
+### Creating Issues
+When creating an issue, try to describe it in a way that everyone understands why it exists and what needs to be done.
+
+Set a a **type** according to what it is:
+- Task: A singular piece of work (that can be started)
+- Story: Stomething representing an idea (that needs further workd) or collection of Tasks
+### Managing (own) Issues
+You can also get a handy overview of the whole Team and your own Issues in our project board.
+Keep the issues up to date with current progress and things.
+Since the Sprints we use are only rough timeframes to document our progress, anyone may start/stop working on issues at any time. Of course, try to align with other people in our weekly meetings.
+## Project Board
+We organize our issues on a central project board on GitHub.
+### Status
+#### 📋Todo 
+A Task that is ready to be worked on. People may reserve issues for themselves (preference), but anyone can still pick them up and work on them.
+
+DON'T reserve tasks when you have plenty of things to do and won't start working on them any time soon.
+#### 🛠️In Progress
+Something is cooking! Someone has started working on this task.
+If you are absent for some time, please hand the task over to someone else, so it can be worked on by someone else while you're gone.
+#### ✅Done
+The task is finished. Go get some coffee ☕
+#### ♾️ Continuous
+Anything that is sort of always in progress. Serves more of a reminder or something.
+### Labels
+These help us break things down into categories. Remember, that Issues also belong to Repositories, so you don't really have to label something as "documentation" when the issue is in the documentation repo. Use those repos as the "Domain"
+
+The following should be the most commonly used labels, but you may introduce new ones as you see fit. Try to use existing ones as good as possible.
+#### Feature
+Creating something new.
+#### Bug
+Something isn't working as it is supposed to. Time to fix it!
+#### Maintenance
+Making existing stuff better; refactoring, cleaning up, streamlining
+#### Research
+Something needs to be researched. Find relevant information so we can make good desicions down the line. Don't forget to document your findings somewhere!
+#### University
+Stuff that isn't immediately related to the project, but still needs to be done
+#### Blocked
+There is a field "Blocked by" in GitHub. Please use it accordingly
