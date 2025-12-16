@@ -23,15 +23,14 @@ In accordance with our timetable, these meetings will last 1 - 1,5h
 Estimates will not be mandatory when creating Issues. However, it is encouraged to help judge the amount of work for a given task. This will ensure that nobody is hoarding work and possibly impeding progress.
 
 The following table will aid in assigning an estimate (in Story Points) to our issues:
-
-| **Story Points (SP)** | **Estimate Type** | **Rough Time Equivalence** | **Why This Estimate?**                                                                                                |
-| --------------------- | ----------------- | -------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| **1**                 | **Trivial**       | $\le 1 \text{ hour}$       | Small fix, minor documentation update, simple research query.                                                         |
-| **2**                 | **Easy**          | $\sim 2 \text{ hours}$     | Simple code integration, small bug fix, assembling one sub-component.                                                 |
-| **3**                 | **Small**         | $\sim 1/2 \text{ Day}$     | Implementing a basic function, drafting a schematic, writing a user story. **Your baseline task.**                    |
-| **5**                 | **Medium**        | $\sim 1 \text{ Full Day}$  | Developing a major software module, initial PCB layout, complex hardware assembly.                                    |
-| **8**                 | **Large**         | $\sim 1.5-2 \text{ Days}$  | Integrating two major systems (HW $\leftrightarrow$ SW), implementing a complex algorithm. **Should be broken down.** |
-| **13**                | **Epic/Too Big**  | $> 2 \text{ Days}$         | A massive component or feature. **MUST be immediately split** into smaller tasks (e.g., into one '5' and two '3's).   |
+| SP | Size | Time | Description & Examples |
+| :---: | :--- | :--- | :--- |
+| **1** | Trivial | < 1 hr | Quick fixes, documentation updates, research. |
+| **2** | Easy | ~ 2 hrs | Simple code integration, assembling one part. |
+| **3** | Small | ~ 4 hrs | **Baseline Task.** Basic feature, drafting a schematic. |
+| **5** | Medium | ~ 1 Day | Major module, PCB layout, complex assembly. |
+| **8** | Large | ~ 2 Days | **Warning zone.** Integrations or complex algorithms. |
+| **13** | Epic | > 2 Days | **STOP.** Too big. Split into smaller tasks immediately. |
 ### Creating Issues
 When creating an issue, try to describe it in a way that everyone understands why it exists and what needs to be done.
 
