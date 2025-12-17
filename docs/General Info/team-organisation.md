@@ -7,7 +7,7 @@ description: "Info and Guidelines on how we organise ourself as a team"
 
 # Team Organisation
 
-The Team will be working with a Scrumban(-like?) Framework to organize the work within the team. Unlike pure Scrum, this will allow us to more flexibly work on our project and lower the overhead of regular meetings.
+The Team will be working with a Scrumban Framework to organize the work within the team. Unlike pure Scrum, this will allow us to more flexibly work on our project and lower the overhead of regular meetings.
 
 We still want to work within sprint timeframes so we can better measure and document process, as documentation will be part of our final grade. These sprints will not have a defined goal, again to keep flexible in the context of a university project.
 ## Meetings
@@ -32,11 +32,16 @@ The following table will aid in assigning an estimate (in Story Points) to our i
 | **8** | Large | ~ 2 Days | **Warning zone.** Integrations or complex algorithms. |
 | **13** | Epic | > 2 Days | **STOP.** Too big. Split into smaller tasks immediately. |
 ### Creating Issues
-When creating an issue, try to describe it in a way that everyone understands why it exists and what needs to be done.
+When creating an issue, describe it in a way that everyone understands why it exists and what needs to be done by giving as much context as possible and linking relevant documentation and issues.
 
-Set a a **type** according to what it is:
+Try to stick to the "As, I want, Because" Framework:
+> *Example:*
+>
+> **As** a mother, **I want** my child to eat healthy food **because** it will grow up strong
+
+Set a **type** according to what it is:
 - Task: A singular piece of work (that can be started)
-- Story: Stomething representing an idea (that needs further workd) or collection of Tasks
+- Story: Something representing an idea (that needs further work) or collection of Tasks
 ### Managing (own) Issues
 You can also get a handy overview of the whole Team and your own Issues in our project board.
 Keep the issues up to date with current progress and things.
@@ -45,7 +50,7 @@ Since the Sprints we use are only rough timeframes to document our progress, any
 We organize our issues on a central project board on GitHub.
 ### Status
 #### 📋Todo 
-A Task that is ready to be worked on. People may reserve issues for themselves (preference), but anyone can still pick them up and work on them.
+A Task that is ready to be worked on. People may reserve issues for themselves (preference), but anyone can still pick them up and work on them. Make sure the assigned person has not yet started working and forgot to update the status!
 
 DON'T reserve tasks when you have plenty of things to do and won't start working on them any time soon.
 #### 🛠️In Progress
