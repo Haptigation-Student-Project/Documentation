@@ -44,7 +44,7 @@ Set a **type** according to what it is:
 - Story: Something representing an idea (that needs further work) or collection of Tasks
 ### Managing (own) Issues
 You can also get a handy overview of the whole Team and your own Issues in our project board.
-Keep the issues up to date with current progress and things.
+Keep the issues up to date with current progress and comment important information like choices, discoveries or workarounds for when you stop working on a task without finishing it.
 Since the Sprints we use are only rough timeframes to document our progress, anyone may start/stop working on issues at any time. Of course, try to align with other people in our weekly meetings.
 ## Project Board
 We organize our issues on a central project board on GitHub.
