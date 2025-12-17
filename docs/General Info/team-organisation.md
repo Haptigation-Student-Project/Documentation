@@ -66,6 +66,8 @@ These help us break things down into categories. Remember, that Issues also belo
 The following should be the most commonly used labels, but you may introduce new ones as you see fit. Try to use existing ones as good as possible.
 #### Feature
 Creating something new.
+#### Research
+A task that only requires Research. Make sure to document it as well!
 #### Bug
 Something isn't working as it is supposed to. Time to fix it!
 #### Maintenance
