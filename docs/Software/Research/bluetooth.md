@@ -1,151 +1,200 @@
+# Android Bluetooth Development
+
+## Quick References
+
+* [Android Developers: Bluetooth Overview](https://developer.android.com/develop/connectivity/bluetooth)
+* [BLE Overview](https://developer.android.com/develop/connectivity/bluetooth/ble/ble-overview)
+
 ---
-title: Android Bluetooth API
-description: Research on Androids Bluetooth API functionality
-sidebar_position: 1
+
+## 1. Permissions (Manifest & Runtime)
+
+**Crucial:** Check permissions at runtime before calling Bluetooth APIs.
+
+### Android 12 (API 31) and higher
+
+Split permissions strictly by intent.
+
+* **`android.permission.BLUETOOTH_SCAN`**: Discovering devices.
+* *Optimization:* If **not** using scan for physical location, add `android:usesPermissionFlags="neverForLocation"` to skip Location permission requirements.
+
+
+* **`android.permission.BLUETOOTH_CONNECT`**: Connecting to paired devices and communicating.
+* **`android.permission.BLUETOOTH_ADVERTISE`**: Broadcasting as a peripheral.
+* **`android.permission.ACCESS_FINE_LOCATION`**:
+* **Required only if** you need physical location derivation or if the `neverForLocation` flag is omitted.
+
+
+
+### Android 11 (API 30) and lower
+
+Legacy permissions.
+
+* **`android.permission.BLUETOOTH`**: Communication.
+* **`android.permission.BLUETOOTH_ADMIN`**: Discovery and settings manipulation.
+* **`android.permission.ACCESS_FINE_LOCATION`**: **Mandatory** for discovery (scanning).
+
+### Manifest Declaration
+
+```xml
+<uses-feature android:name="android.hardware.bluetooth" android:required="true"/>
+<uses-feature android:name="android.hardware.bluetooth_le" android:required="true"/>
+
+```
+
 ---
 
-# Android Bluetooth API
+## 2. Setup & Initialization
 
-## Quick references
-- [Android Developers: Bluetooth](https://developer.android.com/develop/connectivity/bluetooth)
+**Get the Adapter:**
 
-## Setting up Bluetooth
-(Add bluetooth requirement to app)
-
-Always Needed: BluetoothAapter
-```Kotlin
+```kotlin
 val bluetoothManager: BluetoothManager = getSystemService(BluetoothManager::class.java)
-val bluetoothAdapter: BluetoothAdapter? = bluetoothManager.getAdapter()
+val bluetoothAdapter: BluetoothAdapter? = bluetoothManager.adapter
 if (bluetoothAdapter == null) {
-  // Device doesn't support Bluetooth
+    // Device does not support Bluetooth
 }
+
 ```
 
-Requesting user to turn on Bluetooth
-```Kotlin
+**Enable Bluetooth (Modern Approach):**
+Avoid `startActivityForResult`. Use `ActivityResultContracts`.
+
+```kotlin
+private val enableBluetoothLauncher = registerForActivityResult(
+    ActivityResultContracts.StartActivityForResult()
+) { result ->
+    if (result.resultCode == Activity.RESULT_OK) {
+        // Bluetooth enabled
+    }
+}
+
+// Usage
 if (bluetoothAdapter?.isEnabled == false) {
-  val enableBtIntent = Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE)
-  startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT)
+    val enableBtIntent = Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE)
+    enableBluetoothLauncher.launch(enableBtIntent)
 }
+
 ```
 
-onActivityResult() callback returns `RESULT_OK` or `RESULT_CANCELED` 
+**State Monitoring:**
+Register a `BroadcastReceiver` for `BluetoothAdapter.ACTION_STATE_CHANGED`.
 
-Monitor `ACTION_STATE_CHANGED` system broadcast for bluetooth status changes
+---
 
-## Device discovery
+## 3. Device Discovery
 
-From Android 8 (API 26) on: consider [Companion Device Manager API](https://developer.android.com/develop/connectivity/bluetooth/companion-device-pairing)
--> Android 12 (API 31): [companion device profiles](https://source.android.com/docs/core/connect/companion-device-profile)
+### Companion Device Manager (Recommended)
 
-Checking for paired devices:
-```Kotlin
+* **Android 8.0 (API 26)+**: [Companion Device Manager](https://developer.android.com/develop/connectivity/bluetooth/companion-device-pairing).
+* **Why:** Eliminates need for `ACCESS_FINE_LOCATION` in many cases; better UX for pairing specific hardware.
+
+### Manual Discovery (Classic)
+
+* **Action:** `bluetoothAdapter?.startDiscovery()`
+* **Process:** Asynchronous. Heavy battery usage.
+* **Retrieving Paired Devices:**
+```kotlin
+// Requires BLUETOOTH_CONNECT permission on Android 12 (API 31)+
 val pairedDevices: Set<BluetoothDevice>? = bluetoothAdapter?.bondedDevices
 pairedDevices?.forEach { device ->
-   val deviceName = device.name
-   val deviceHardwareAddress = device.address // MAC address
+    val name = device.name
+    val mac = device.address
 }
+
 ```
 
-Further info on discovery: https://developer.android.com/develop/connectivity/bluetooth/find-bluetooth-devices
 
-## Connecting (classic)
-Server/Client Architecture, see documentation
+* **Receiver:** Register for `BluetoothDevice.ACTION_FOUND` to handle scan results.
 
-use cancel() for terminating connection
+---
 
-## Data Transfer (classic)
-`BluetoothSocket` provides `InputStream` and `OutputStream`, these can be read and written from/to
+## 4. Connecting & Data (Classic)
 
-Both methods are blocking, consider a separate thread.
+* **Architecture:** Client/Server via RFCOMM sockets.
+* **UUID:** Use standard UUIDs (e.g., SPP: `00001101-0000-1000-8000-00805F9B34FB`) or generate unique ones for custom apps.
+* **Key Class:** `BluetoothSocket`.
+* **Blocking Calls:** `socket.connect()`, `inputStream.read()`, `outputStream.write()` are **blocking**.
+* *Refinement:* Always run these in `Dispatchers.IO` (Coroutines) or a background thread.
 
-## Profiles (classic)
-- Headset
-- A2DP (Audio)
-- Health Device
 
-## Permissions
-Android 12+ (API 31):
-- `BLUETOOTH_SCAN`: searching for devices
-- `BLUETOOTH_ADVERTISE`: make discoverable
-- `BLUETOOTH_CONNECT`: connect to paired devices
-- `ACCESS_FINE_LOCATION`: determine physical location from scan
-	- IF NOT USED: set `android:maxSdkVersion` to 30 for `ACCESS_FINE_LOCATION`
+* **Cleanup:** Always call `socket.close()` when done or on error.
 
-older Android:
-- `BLUETOOTH`: any classic or BLE communication
-- `ACCESS_FINE_LOCATION`: always necessary (on Android 8, ConpanionDeviceManager won't need this)
+---
 
-Initiate discoverability/manipulate settings: `BLUETOOTH_ADMIN`
+## 5. Bluetooth Low Energy (BLE)
 
-Flag that Bluetooth is needed:
+### Key Concepts
+
+* **GATT (Generic Attribute Profile):** Hierarchy of data exchange.
+* **ATT (Attribute Protocol):** Transport layer.
+* **Roles:**
+* **Central:** Scans and initiates connection (Phone).
+* **Peripheral:** Advertises presence (Sensor/Watch).
+
+
+* **Structure:** Profile -> Service -> Characteristic (Data) -> Descriptor (Metadata).
+
+### 1. Scanning (Modern)
+
+Use `BluetoothLeScanner`, not the adapter directly.
+
+```kotlin
+val scanner = bluetoothAdapter.bluetoothLeScanner
+val scanCallback = object : ScanCallback() {
+    override fun onScanResult(callbackType: Int, result: ScanResult) {
+        super.onScanResult(callbackType, result)
+        // Access device: result.device
+    }
+}
+
+// Start Scan (Requires BLUETOOTH_SCAN + Location permissions depending on config)
+scanner.startScan(scanCallback)
+
 ```
-<uses-feature android:name="android.hardware.bluetooth" android:required="true"/>
+
+* **Tip:** Use `ScanSettings` to balance latency/power (e.g., `SCAN_MODE_LOW_LATENCY`).
+* **Limit:** Stop scanning immediately after finding the device to save battery.
+
+### 2. Connecting (GATT)
+
+```kotlin
+// context, autoConnect, callback
+val gatt = device.connectGatt(context, false, gattCallback)
+
 ```
-or
+
+* **`autoConnect = true`**: Better for background reconnection; does not time out.
+* **`autoConnect = false`**: Better for immediate connection attempts; has a timeout.
+
+### 3. Transferring Data
+
+All operations happen inside `BluetoothGattCallback`.
+
+* **Service Discovery:** Must call `gatt.discoverServices()` after connection state becomes `STATE_CONNECTED`.
+* **Reading/Writing:**
+```kotlin
+// Reading
+gatt.readCharacteristic(characteristic)
+
+// Writing: Android 13 (API 33) introduced a new signature
+if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+    gatt.writeCharacteristic(characteristic, value, BluetoothGattCharacteristic.WRITE_TYPE_DEFAULT)
+} else {
+    characteristic.value = value // Deprecated but needed for older versions
+    gatt.writeCharacteristic(characteristic)
+}
+
 ```
-<uses-feature android:name="android.hardware.bluetooth_le" android:required="true"/>
-```
 
-## BLE
-Use-cases:
-- for use with small amounts of data
-- proximity sensors
 
-Communication data is avaliable to ALL APPS!
+* **Notifications:**
+1. Enable locally: `gatt.setCharacteristicNotification(characteristic, true)`
+2. Write to Descriptor: You must write `ENABLE_NOTIFICATION_VALUE` to the Client Characteristic Configuration Descriptor (CCCD) UUID (`0x2902`).
 
-1. Find BLE device
-2. connect to GATT server
-3. transfer data
 
-### Generic Attribute Profile (GATT)
-Sending and receiving general data ("attributes"), everything is based on this
 
-### Profiles
-Devices can implement multiple
-List of profiles: https://www.bluetooth.org/en-us/specification/adopted-specifications
+### 4. Important BLE Constraints
 
-### Attribute Protocol (ATT)
-GATT is built on ATT
-Each Attribute has unique 128-bit identifier (UUID)
-attributed are formatted as characteristics and services
-
-#### Characteristic
-single value and descriptors that describe value
-== type
-
-#### Descriptor
-Human radable description, acceptable range, measuremnt unit
-
-#### Service
-Collection of characteristics
-
-### Roles
-Central/Peripheral:
-- Applies to connection
-- Central role: scans
-- Peripheral: advertises
-
-GATT Server/Client:
-- Applies to Communication
-- Client: Sends requests for data
-- Server: Fulfills data
-
-### Finding devices
-`startScan(callback)`
-callback Function: `ScanCallback` used to return results
-Scanning is battery intensive, stop scanning as soon as possible
-
-`startScan` supports filters
-
-### Connecting GATT server
-call `connectGatt()` on device
-
-Parameters:
-- Context (use `this`)
-- autoConnect: boolean
-- BluetoothGattCallback
-
-Callback delivers results to Client (Android app) and further operations
-
-Bound service??
+* **Serial Execution:** GATT operations are serial. You cannot issue a `write` before the previous `write` or `read` callback has finished. Use a **Queue** mechanism.
+* **MTU Size:** Default is 23 bytes (20 bytes payload). Request higher MTU (`gatt.requestMtu(512)`) for larger chunks.
