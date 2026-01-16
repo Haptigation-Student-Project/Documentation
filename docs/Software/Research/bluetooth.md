@@ -1,3 +1,10 @@
+---
+title: Android Bluetooth Development
+description: Quick reference for bluetooth development on android
+hide_table_of_contents: false
+sidebar_position: 1
+---
+
 # Android Bluetooth Development
 
 ## Quick References
