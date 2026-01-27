@@ -10,8 +10,11 @@ sidebar_position: 2
 ## Overview
 This Google Apps Script automates the process of sending personalized newsletters via Gmail. It reads a draft email containing "Haptigation Newsletter" in the subject line and sends it to all contacts with a specific label, personalizing each email with the recipient's name.
 Implementing it this way ensures data safety and allows for personalization in the newsletter.
+Emojis are not supported.
 
-You can find it here: [Github](https://github.com/Haptigation-Student-Project/Google-Apps-Script/)
+You can find the script here: [Github](https://github.com/Haptigation-Student-Project/Google-Apps-Script/)
+
+A sample newsletter can be found here: [Newsletter Template](/Documentation/downloadables/newsletter_template.html)
 
 ---
 
@@ -49,11 +52,13 @@ Open [Gmail](https://mail.google.com) and [Google Apps Script](https://script.go
 In Gmail, create a new email draft containing your complete newsletter content
 
 #### IMPORTANT: 
-The subject line MUST include ```Haptigation Newsletter``` somewhere (e.g., "Haptigation Newsletter - December 2025")
+The subject line MUST include `Update zu Haptigation` somewhere in it (e.g., "Dein Update zu Haptigation - Dezember 2025")
 
-Use [NAME] as a placeholder where you want the recipient's name to appear.
+**Personalization placeholders:**
+- Use `[NAME]` or `[Name]` or `[name]` where you want the recipient's name to appear
+- If a contact has no name stored or name is "unbekannt", it will be replaced with "LeserIn" instead
 
-If users [NAME] is "" or "unbekannt" [NAME] will be replaced with "LeserIn" instead of the contact name. 
+Example text: "Hallo [NAME], hier ist dein monatlicher Newsletter..."
 
 **DO NOT SEND - Save as draft only**
 
@@ -63,12 +68,18 @@ Replace the CONFIG variables with your actual values:
 
 ```javascript
 const CONFIG = {
-  contactLabel: "Newsletter Subscriber",  // The label of your newsletter contacts
-  emailSubject: "{Enter your subject}",   // This replaces the draft's subject
-  senderName: "{Your Name} von Company",  // Shows as "Max von Company via company@gmail.com"
-  testMode: false  // Set to true for testing, false for live sending
+  contactLabel: "Newsletter Subscriber",    // The label of your newsletter contacts
+  senderName: "{Name} von {Company}",       // Shows as "Name von Company via company@gmail.com"
+  testMode: true,                           // Set to true for testing, false for live sending
+  debugMode: false                          // Set to true only for debugging (shows unmasked emails)
 };
 ```
+
+**Settings Explained:**
+- **contactLabel**: The exact name of your Contact Group/Label in Google Contacts
+- **senderName**: Your name that appears as the sender (will be appended with "via [your email]")
+- **testMode**: When `true`, emails are only sent to your own account for testing
+- **debugMode**: When `true`, email addresses are shown unmasked in logs (testing only!)
 
 ### Step 4: Save the Script
 Click the disk icon (💾) or press Ctrl+S / Cmd+S to save your changes.
@@ -106,7 +117,7 @@ Click the disk icon (💾) or press Ctrl+S / Cmd+S to save your changes.
 
 Verify the newsletter was sent successfully (check your Sent folder)
 
-Delete the draft or modify its subject to NOT include ```Haptigation Newsletter```
+Delete the draft or modify its subject to NOT include `Update zu Haptigation`
 
 You can restore the subject line when preparing the next newsletter edition
 
@@ -142,19 +153,26 @@ The script automatically pauses every 50 emails for one cycle (default 1min) to 
 ## Troubleshooting
 ### "No Newsletter Draft Found"
 
-- Ensure your draft's subject contains "Haptigation Newsletter"
+- Ensure your draft's subject contains "Update zu Haptigation"
 - Check the execution log for available draft subjects
 
 ### "No Contacts Found"
 
-- Verify the contact label name matches exactly
+- Verify the contact label name matches exactly (case-sensitive!)
 - Ensure contacts have the specified label in Gmail Contacts
 - Check that People API is enabled
+- Run "listAllContactGroups" to see available labels
 
 ### "Permission Denied"
 
 - Re-run authorization process
 - Ensure Gmail API and People API are both enabled in Services
+
+### Emails not personalized with names
+
+- Ensure contacts have names stored in Google Contacts
+- Check that names are not empty or set to "unbekannt"
+- If no name: script will use "LeserIn" as fallback
 
 ### Daily Sending Limits
 

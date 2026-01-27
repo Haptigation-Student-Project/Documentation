@@ -52,20 +52,30 @@ You can customize the CONFIG settings at the top of the script:
 
 ```javascript
 const CONFIG = {
-  DRAFT_SUBJECT: 'E-Mail Response Automation Draft - DO NOT DELETE',  // Draft subject (must match exactly)
-  REPLY_SUBJECT: 'Re: ',                                              // Reply subject prefix
-  MAX_EMAILS_PER_RUN: 50,                                             // Max emails processed per check
-  CHECK_INTERVAL_MINUTES: 1,                                          // How often to check (in minutes)
-  LABEL_NAME: 'AutoResponded'                                         // Label for processed emails
+  DRAFT_SUBJECT: 'E-Mail Response Automation Draft - DO NOT DELETE',      // Draft subject (must match exactly)
+  FEEDBACK_DRAFT_SUBJECT: 'Feedback E-Mail Response Automation Draft - DO NOT DELETE',  // Feedback draft subject
+  TEST_SUBJECT_PREFIX: 'Test: ',                                          // Prefix for test emails
+  FEEDBACK_SUBJECT_PREFIX: 'Feedback zum App-Design',                     // Prefix for feedback emails
+  FEEDBACK_REPLY_SUBJECT: 'Vielen Dank für Ihr Feedback',                 // Reply subject for feedback
+  RESPONSE_SUBJECT: 'Re: ',                                               // Reply subject prefix
+  MAX_EMAILS_PER_RUN: 50,                                                 // Max emails processed per check
+  CHECK_INTERVAL_MINUTES: 1,                                              // How often to check (in minutes)
+  LABEL_NAME: 'AutoResponded',                                            // Label for processed emails
+  debugMode: false                                                        // Debug mode (shows unmasked emails)
 };
 ```
 
 **Settings Explained:**
-- DRAFT_SUBJECT: The exact subject of your response draft (don't change unless you change the draft)
-- REPLY_SUBJECT: Prefix for replies (default "Re: " creates "Re: Original Subject")
-- MAX_EMAILS_PER_RUN: Limits emails processed per check (prevents quota issues)
-- CHECK_INTERVAL_MINUTES: Frequency of checks (1 = every minute, 5 = every 5 minutes, etc.)
-- LABEL_NAME: Gmail label applied to processed emails (prevents duplicate responses)
+- **DRAFT_SUBJECT**: The exact subject of your default response draft
+- **FEEDBACK_DRAFT_SUBJECT**: Separate draft for feedback emails (optional)
+- **TEST_SUBJECT_PREFIX**: Emails starting with this are ignored (prevents test email loops)
+- **FEEDBACK_SUBJECT_PREFIX**: Emails with this prefix receive a separate feedback response
+- **FEEDBACK_REPLY_SUBJECT**: Subject line for feedback responses
+- **RESPONSE_SUBJECT**: Prefix for normal replies (default "Re: " creates "Re: Original Subject")
+- **MAX_EMAILS_PER_RUN**: Limits emails processed per check (prevents quota issues)
+- **CHECK_INTERVAL_MINUTES**: Frequency of checks (1 = every minute, 5 = every 5 minutes, etc.)
+- **LABEL_NAME**: Gmail label applied to processed emails (prevents duplicate responses)
+- **debugMode**: When `true`, emails are shown unmasked in logs (testing only!)
 
 ### Step 4: Save the Script
 Click the disk icon (💾) or press Ctrl+S / Cmd+S to save your changes.
@@ -115,11 +125,16 @@ Prevents duplicates: Once labeled, the script won't respond again to that email
 
 ## Smart Features
 
-- Inline Images: Supports embedded images in your draft - Only supports pictures if added via URL (e.g. [imgur](https://imgur.com) pictures)
-- HTML Formatting: Preserves rich text formatting from your draft
-- Thread-Safe: Works with email threads/conversations
-- Duplicate Prevention: Uses Gmail labels to track responded emails
-- Rate Limiting: Processes maximum 50 emails per run by default
+- **Dual Draft System**: Support for default and feedback-specific response drafts
+- **Emoji Reaction Filter**: Automatically skips emoji reactions (doesn't count as messages to respond to)
+- **Feedback Detection**: Automatically uses a special response draft for feedback emails
+- **Test Email Filter**: Emails starting with "Test: " are automatically ignored (prevents loops)
+- **Inline Images**: Supports embedded images in your draft - Only supports pictures if added via URL (e.g. [imgur](https://imgur.com) pictures)
+- **HTML Formatting**: Preserves rich text formatting from your draft
+- **Thread-Safe**: Works with email threads/conversations
+- **Duplicate Prevention**: Uses Gmail labels to track responded emails
+- **Rate Limiting**: Processes maximum 50 emails per run by default
+- **Automatic Skip**: Emoji reactions and test emails bypass the response system
 
 ---
 
@@ -181,9 +196,38 @@ Modify CHECK_INTERVAL_MINUTES:
 
 After changing, run setupTrigger again to apply.
 
+### Use Separate Feedback Response Draft (Optional)
+The script supports a separate draft for feedback emails:
+
+1. Create a second draft with subject: `Feedback E-Mail Response Automation Draft - DO NOT DELETE`
+2. Customize it for feedback responses (e.g., "Thank you for your feedback!")
+3. Emails with "Feedback zum App-Design" in the subject will automatically use this draft
+4. Customize the prefix in CONFIG if needed:
+   ```javascript
+   FEEDBACK_SUBJECT_PREFIX: 'Feedback zum App-Design'  // Emails starting with this use feedback draft
+   FEEDBACK_REPLY_SUBJECT: 'Vielen Dank für Ihr Feedback'  // Response subject for feedback
+   ```
+
+### Filter Out Test Emails
+Emails starting with "Test: " are automatically ignored:
+- No response will be sent
+- They won't get the "AutoResponded" label
+- Useful for testing your draft without triggering responses
+
+To customize the test prefix:
+```javascript
+TEST_SUBJECT_PREFIX: 'Test: '  // Change this string to match your test prefix
+```
+
+### Skip Emoji Reactions
+The script automatically detects and skips emoji reactions:
+- One-emoji messages are filtered out
+- This prevents unnecessary responses to quick emoji feedback
+- Relies on message body analysis
+
 ### Customize Reply Subject
 
-If: 'Re: ' → "Re: Original Subject" (default, won't work if it doesn't start with 'Re: ')
+If: 'Re: ' → "Re: Original Subject" (default, creates standard email reply format)
 
 If: 'Thank you for your email!' → Uses this exact subject (change content as you wish)
 
@@ -215,6 +259,13 @@ Be mindful of Gmail's daily sending limits
 - Shouldn't happen due to label system
 - If it does, check that LABEL_NAME hasn't changed
 - Verify the label is being applied (check in Gmail)
+
+### Emoji Reactions Trigger Responses
+
+This should not happen - they are automatically filtered:
+- Check execution log for "Emoji-Reaktion übersprungen" messages
+- Verify the isEmojiReaction() function is working
+- If issues persist, increase CHECK_INTERVAL_MINUTES
 
 ### Daily Sending Limit Reached
 

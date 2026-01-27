@@ -41,19 +41,19 @@ Create a new draft in Gmail with your deletion confirmation (supports HTML forma
 **IMPORTANT:**
 - Set the subject to exactly:
 
-```
+```javascript
 Confirm User Data Deletion Draft - DO NOT DELETE
 ```
 
 **Personalization:**
-- Use `&#123;&#123;EMAIL&#125;&#125;` as a placeholder in the text
+- Use `{EMAIL}` as a placeholder in the text
 - It will be automatically replaced by the actual email address
-- Example: "Your data for &#123;&#123;EMAIL&#125;&#125; has been fully deleted."
+- Example: "Your data for `{EMAIL}` has been fully deleted."
 
-**Inline images:**
-- Insert images directly in the draft (not as separate attachments)
-- The script will automatically include all inline images
-- Also supports real file attachments
+**HTML and Inline Images:**
+- Supports HTML formatting and inline images
+- Inline images can be added directly in the Gmail draft
+- Only URL-based inline images are supported
 
 **CAUTION:**
 - DO NOT SEND - Save as a draft only
@@ -64,22 +64,23 @@ Open the script and adjust the CONFIG settings:
 
 ```javascript
 const CONFIG = {
-  DEBUG_MODE: false, // Set to true for full email display in logs
-  MAX_THREADS_PER_BATCH: 500, // Maximum number of threads per batch deletion
-  EMAIL: "beispiel@gmail.com", // Replace with the real email to be deleted
-  TESTMAIL: "test@gmail.com", // Replace with the real email you want to test with
-  DRAFT_SUBJECT: 'Confirm User Data Deletion Draft - DO NOT DELETE', // Draft subject in Gmail
-  FINAL_EMAIL_SUBJECT: 'Wir haben ihre Nutzerdaten gelöscht', // Subject of the sent email
+  DEBUG_MODE: false,                                     // Set to true for full email display in logs
+  MAX_THREADS_PER_BATCH: 500,                            // Maximum number of threads per batch deletion
+  EMAIL: "beispiel@gmail.com",                           // Replace with the real email to be deleted
+  TESTMAIL: "test@gmail.com",                            // Replace with the real email you want to test with
+  DRAFT_SUBJECT: 'Confirm User Data Deletion Draft - DO NOT DELETE',  // Draft subject in Gmail
+  FINAL_EMAIL_SUBJECT: 'Wir haben ihre Nutzerdaten gelöscht',         // Subject of the sent email
 };
 ```
 
 **Settings explained:**
-- **DEBUG_MODE**: When `true`, full emails are logged (testing only!)
-- **MAX_THREADS_PER_BATCH**: Maximum number of email threads per batch (default: 500)
-- **EMAIL**: The email address whose data should be deleted
-- **TESTMAIL**: Test email address for functions like `testConfirmationEmail()`
-- **DRAFT_SUBJECT**: Subject of the draft template (DO NOT change!)
-- **FINAL_EMAIL_SUBJECT**: Subject of the actual confirmation email sent
+- **DEBUG_MODE**: When `true`, full emails are logged (testing only!) - shows full email addresses instead of anonymized
+- **MAX_THREADS_PER_BATCH**: Maximum number of email threads processed per batch (default: 500, increase for many emails)
+* **`EMAIL`**: The email address whose data should be deleted (must be set before execution!)
+* **TESTMAIL**: Test email address for functions like `testConfirmationEmail()` and `listContactsForEmail()`
+* **DRAFT_SUBJECT**: Subject of the draft template for confirmation email (DO NOT change!)
+* **FINAL_EMAIL_SUBJECT**: Subject line of the confirmation email sent to the user
+* **DEBUG_MODE**: When `true`, full emails are logged (testing only!) - shows full email addresses instead of anonymized; set back to false for production
 
 ### Step 3: Save the script
 Click the save icon (💾) or press Ctrl+S / Cmd+S
@@ -90,7 +91,7 @@ Click the save icon (💾) or press Ctrl+S / Cmd+S
 **IMPORTANT:** Before each execution, the email address to be deleted must be set in CONFIG:
 
 ```javascript
-EMAIL: "user@example.com"  // Replace with the real email
+CONFIG.EMAIL = "user@example.com"  // Replace with the real email
 ```
 
 **Safety check:**
@@ -141,9 +142,9 @@ The script performs the following steps:
 
 **Step 1: Send confirmation email**
 - Draft with subject "Confirm User Data Deletion Draft - DO NOT DELETE" is searched
-- `&#123;&#123;EMAIL&#125;&#125;` placeholder is replaced with the actual email
-- Email with HTML formatting and inline images is sent
-- On error: warning in log, but deletion continues
+- \{EMAIL\} placeholder is replaced with the actual email
+- Email with HTML formatting, inline images, and attachments is sent
+- On error: warning in log, but deletion continues (no blocker)
  
 **Step 2: Search contacts**
 - All Google Contacts are searched
@@ -156,6 +157,7 @@ The script performs the following steps:
 - Emails are processed in batches (default: 500 threads per batch)
 - Each thread is moved to Trash
 - Number of deleted threads is logged
+- Continues across batches until no more threads are found
  
 **Step 4: Final report**
 - Summary in the log:
@@ -233,7 +235,7 @@ Check the log for success messages
 
 Verify in your inbox:
 - Email received?
-- `&#123;&#123;EMAIL&#125;&#125;` placeholder replaced?
+- \{EMAIL\} placeholder replaced?
 - HTML formatting correct?
 - Inline images visible?
 
@@ -249,6 +251,11 @@ The log shows:
 - Number of contacts found
 - Details for each contact (anonymized)
 - In debug mode: full contact details
+
+### 4. Email validation
+- The script validates the email format via `isValidEmail()` before starting deletion
+- If the email is missing or invalid, execution is aborted with an error log
+- Ensure `EMAIL` is set and valid before running `deleteByEmail()`
 
 **IMPORTANT:** This function deletes nothing - for viewing only!
 
@@ -283,7 +290,7 @@ FINAL_EMAIL_SUBJECT: 'Your data has been deleted'
 ### Enable debug mode
 For development and testing only:
 
-```javascript
+```
 DEBUG_MODE: true
 ```
 
@@ -317,7 +324,7 @@ Confirm User Data Deletion Draft - DO NOT DELETE
 
 ### "Confirmation email could not be sent"
 - Check the draft subject (see above)
-- Ensure the `&#123;&#123;EMAIL&#125;&#125;` placeholder is present in the draft
+- Ensure the \{EMAIL\} placeholder is present in the draft
 - Verify Gmail permissions
 
 **Note:** Deletion will continue regardless
@@ -445,7 +452,7 @@ Comment out the following block in `deleteAllDataForEmail()`:
 
 - Always test with a test email: `testConfirmationEmail()`
 - Check contacts: `listContactsForEmail()`
-- Verify confirmation draft correctness
+- Verify confirmation draft correctness (subject, HTML, inline images, and \{EMAIL\} placeholder)
 - Ensure `DEBUG_MODE: false`
 
 ### During execution

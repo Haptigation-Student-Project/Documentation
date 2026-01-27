@@ -55,6 +55,11 @@ Unsubscribe Newsletter Draft - DO NOT DELETE
 - It will be automatically replaced by the actual email address
 - Example: "This confirmation is sent to: [EMAIL]"
 
+**HTML and Inline Images:**
+- Supports HTML formatting and inline images (via URL)
+- Images must be embedded as inline images, not separate attachments
+- Formatting will be preserved in the confirmation email
+
 **CAUTION:**
 - DO NOT SEND - Save as a draft only
 - Never delete - the script relies on this draft
@@ -65,18 +70,18 @@ Open the script and adjust the CONFIG settings:
 
 ```javascript
 const CONFIG = {
-  contactLabel: "Newsletter Subscriber",      // Your newsletter label
-  formID: "YOUR_FORM_ID_HERE",                // Google Form ID
-  confirmationSubject: "Newsletter unsubscribe confirmed",  // Email subject
-  senderName: "Your Team Name",               // Sender name
+  contactLabel: "Newsletter Subscriber",      // Your newsletter label in Google Contacts
+  formID: "{your form ID}",                   // Google Form ID
+  confirmationSubject: "Haptigation Newsletter-Abmeldung bestätigt",  // Email subject
+  senderName: "Haptigation Team",             // Sender name
   debugMode: false                            // Set to true only for testing!
 };
 ```
 
 **Settings explained:**
-- **contactLabel**: Name of your newsletter Contact Group in Google Contacts
-- **formID**: The ID of your Google Form (see below)
-- **confirmationSubject**: Subject of the confirmation email
+- **contactLabel**: Name of your newsletter Contact Group in Google Contacts (must match exactly!)
+- **formID**: The ID of your Google Form (see below for how to find it)
+- **confirmationSubject**: Subject of the confirmation email sent to the user
 - **senderName**: Name that appears as the sender
 - **debugMode**: When `true`, full emails are logged (testing only!)
 
@@ -119,23 +124,18 @@ The automation is now active! For every form submission:
 
 ## Workflow
 
-User fills out the unsubscribe form
+User fills out the unsubscribe form with their email address
 
-The script is automatically triggered
+The form automatically triggers the onFormSubmit() function
 
-The following steps occur:
+The following steps occur automatically:
 1. Extract email address from form response
-2. Search the Contact Group "Newsletter Subscriber"
-3. Find the contact with the matching email
-4. Remove the contact from the group
-5. Send personalized confirmation email
-6. Delete form response (GDPR)
-7. Log success (anonymized)
-
-On errors:
-- Admin receives an error notification
-- Email is anonymized in the log
-- Form response is retained for manual review
+2. Validate and normalize the email address
+3. Search the Contact Group for matching email
+4. Remove the contact from the newsletter group
+5. Send personalized confirmation email (with [EMAIL] replaced)
+6. Delete form response immediately (GDPR compliance)
+7. Log the complete process (with anonymized emails)
 
 ---
 
@@ -205,16 +205,21 @@ Open the script
 
 Edit the function `testUnsubscribe()`:
 ```javascript
-const testEmail = "your-test-email@example.com";
+const testEmail = "test@gmx.de";  // Change to your test email
 ```
 
 Select "testUnsubscribe" in the dropdown
 
 Click Run (▶️)
 
-Check the log for success messages
+Check the log for:
+- Success messages ("✓ Abmeldung erfolgreich")
+- Error messages if any occur
+- How many contacts were found
 
-Verify that the email was removed from the newsletter group
+Verify that:
+- The email was removed from the newsletter group
+- A confirmation email was received (check spam folder)
 
 ### List newsletter contacts
 
@@ -222,9 +227,11 @@ Select "listNewsletterContacts" in the dropdown
 
 Click Run (▶️)
 
-The log shows all contacts in the newsletter group (anonymized)
-
-In debug mode (`debugMode: true`), full details are displayed
+The log shows:
+- All available Contact Groups
+- Newsletter group details
+- All contacts in the newsletter group (anonymized by default)
+- In debug mode: full contact details including emails
 
 ---
 
@@ -262,18 +269,19 @@ Appears as the sender of the confirmation email
 
 ## Troubleshooting
 ### "No Contact Groups found"
-- Check if you have enabled the People API
+- Check if you have enabled the People API (Services > + > People API)
 - Make sure you have at least one Contact Group in Google Contacts
-- Check that `contactLabel` exactly matches your label (case-sensitive!)
+- Check that `contactLabel` exactly matches your label name (case-sensitive!)
 
 ### "Label not found"
-- Go to Google Contacts and create the label manually
+- Go to Google Contacts and verify the label exists
 - The name must exactly match `contactLabel` in CONFIG
 - Run `listNewsletterContacts()` to see available labels
+- Check spelling and capitalization carefully
 
 ### "No draft found"
 - Ensure the draft subject is exact: `Unsubscribe Newsletter Draft - DO NOT DELETE`
-- Watch for spaces and typos
+- Watch for extra spaces or typos
 - Make sure the draft hasn't been accidentally deleted
 
 ### No confirmation email received
@@ -283,19 +291,27 @@ Appears as the sender of the confirmation email
 - Enable `debugMode: true` for detailed logs
 
 ### "Contact not found in newsletter list"
-- Email must match
+- Email must match exactly (case doesn't matter, but spacing does)
 - Contact must be in the specified Contact Group
 - Run `listNewsletterContacts()` to see all members
 - Check if the contact has multiple email addresses
+- Try manually searching in Google Contacts
 
 ### Form response not deleted
+- This is logged as a warning but doesn't stop the unsubscribe
 - Ensure `formID` in CONFIG is correct
 - Check if the script has permissions for the form
-- Not critical - unsubscribe still works
+- Not critical for functionality - unsubscribe still works
 
-### Images not appearing in email
+### Images not appearing in confirmation email
 - Images must be embedded via URL (not as file attachments)
-- Gmail sometimes blocks inline images - recipients may need to click "Show images"
+- Gmail sometimes blocks inline images - user may need to click "Show images"
+- Test with `testUnsubscribe()` to verify formatting
+
+### Multiple unsubscribe requests from same email
+- Script will attempt to remove again but won't error
+- Contact already removed on first request won't be found on second attempt
+- Logged as "Kontakt mit E-Mail X nicht in der Newsletter-Liste gefunden"
 
 ---
 
