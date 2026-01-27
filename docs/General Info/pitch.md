@@ -190,7 +190,7 @@ Compared to existing solutions like Wayband (Wear Works):
 
 **Current Stage:** Validating User Feedback from [Menti Surveys](https://www.menti.com/alx5ib81p2uv)
 
-**Future Steps:** Please check out our [Roadmap](/docs/General Info/roadmap) for additional infos.
+**Future Steps:** Please check out our [Roadmap](/docs/General%20Info/roadmap) for additional infos.
 
 **Team Characteristics:**
 - Agile development methodology
