@@ -14,7 +14,7 @@ Emojis are not supported.
 
 You can find the script here: [Github](https://github.com/Haptigation-Student-Project/Google-Apps-Script/)
 
-A sample newsletter can be found here: [Newsletter Template](/Documentation/downloadables/newsletter_template.html)
+A sample newsletter can be found here: <a href="/Documentation/downloadables/newsletter_template.html" target="_blank">Newsletter Template</a>
 
 ---
 
