@@ -36,7 +36,7 @@ Markdown
 - `0x40`: **Dual** - Reserved
 - `0x41`: **Dual** - U-Turn (Simultaneous)
 
-Compare patterns [here](link/to/patterns)
+Compare patterns [here](/docs/Hardware/Prototypes/dual-wristband)
 
 ## Target
 
