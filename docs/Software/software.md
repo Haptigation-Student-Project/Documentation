@@ -1,5 +1,5 @@
 ---
-title: Overview
+title: Software Overview
 description: Documentation about every software topic
 hide_table_of_contents: true
 sidebar_position: 1
