@@ -1,12 +1,10 @@
 ---
 title: Placeholder
-description: Documentation on frontend stuff
+description: Documentation on backend stuff
 hide_table_of_contents: true
-sidebar_position: 2
+sidebar_position: 1
 ---
 
-# Frontend Documentation
+# Backend Documentation
 
-The Frontend Documentation is coming as soon as we have intel to share with you :)
-
-Stay tuned!!
+Here we collect documentation on the stuff that goes on in the backend :)
