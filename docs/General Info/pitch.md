@@ -8,7 +8,7 @@ description: "Here we would like to give you an overview of the entire project."
 
 ## Overview
 
-Haptigation is a **haptic navigation system** designed to provide turn-by-turn directions through vibration feedback, allowing users to navigate without relying on visual or auditory cues. The system consists of two **vibration wristbands** paired with a mobile application, offering an **intuitive and accessible navigation** solution for bikers, cyclists, visually and hearing impaired persons and other users who need their eyes and ears free for safety-critical tasks while navigating.
+Haptigation is a **haptic navigation system** designed to provide turn-by-turn directions through vibration feedback, allowing users to navigate without relying on visual or auditory cues. The system consists of one or two **vibration wristbands** paired with a mobile application, offering an **intuitive and accessible navigation** solution for bikers, cyclists, visually and hearing impaired persons and other users who need their eyes and ears free for safety-critical tasks while navigating.
 
 **Core Concept:** "Buzz left, go left. Buzz right, go right."
 
@@ -20,9 +20,9 @@ Haptigation is a **haptic navigation system** designed to provide turn-by-turn d
 
 Modern navigation systems present significant safety challenges in certain contexts:
 
-- **Visual Navigation** requires constant attention to screens, taking eyes away from the road
-- **Auditory Navigation** requires hearing capacity, blocking out important environmental sounds
-- **Traffic Safety** demands full sensory awareness from of you if you're on the road
+- **Visual Navigation** requires constant attention to screens, taking eyes away from the road.
+- **Auditory Navigation** requires hearing capacity, blocking out important environmental sounds.
+- **Traffic Safety** demands full sensory awareness of you if you're on the road.
 
 ### The Critical Gap
 
@@ -44,6 +44,7 @@ Haptigation provides a third modality for navigation through haptic feedback:
 - **Mobile Application:** Route planning and navigation engine (running with google maps)
 - **Intuitive Feedback:** Simple vibration patterns indicate direction
 - **Hands-Free Operation:** No need to look at screens or listen to audio
+- Alternatively we also offer single wristband navigation and we are currently working on a bilateral system with smart-watches.
 
 ---
 
@@ -76,13 +77,13 @@ The Haptigation system comprises three main components:
    - User interface for destination input and settings
 
 2. **Vibration Wristbands (Hardware)**
-   - Bilateral wearable devices (left and right wrist)
+   - Wearable devices
    - Bluetooth connectivity
    - Vibration motors for haptic feedback
    - Battery power management
 
 3. **Communication Protocol**
-   - Real-time position tracking
+   - Real-time position tracking via Google Maps SDK
    - Direction calculation and command transmission
    - Haptic pattern generation
 
@@ -100,7 +101,7 @@ The Haptigation system comprises three main components:
 - The system shall provide distinct patterns for different navigation events
 
 **FR3: Position Tracking**
-- The system shall track user location in real-time via GPS
+- The system shall track user location in real-time via GPS and Google Maps
 - The system shall update navigation instructions based on current position
 - The system shall detect when users deviate from planned routes
 
@@ -111,6 +112,7 @@ The Haptigation system comprises three main components:
 
 **FR5: Device Management**
 - The system shall pair with two wristbands simultaneously
+- The system shall pair with smartwatches or single wristbands
 - The system shall monitor wristband battery levels
 - The system shall allow customization
 
@@ -167,7 +169,7 @@ The Haptigation system comprises three main components:
 
 ### Competitive Advantage
 
-Compared to existing solutions like Wayband (Wear Works):
+Compared to existing solutions:
 
 | Feature | Wayband | Haptigation |
 |---------|---------|-------------|
@@ -193,7 +195,6 @@ Compared to existing solutions like Wayband (Wear Works):
 **Future Steps:** Please check out our [Roadmap](/docs/General%20Info/roadmap) for additional infos.
 
 **Team Characteristics:**
-- Agile development methodology
 - Hands-on technical implementation
 - Fast iteration capabilities
 - User-centered design approach
@@ -202,15 +203,20 @@ Compared to existing solutions like Wayband (Wear Works):
 
 ## Data Usage
 
-We are not interested in harming you in any way.
+We are not interested in harming you in any way by taking advantage of your data.
 
 Therefore we will do everything in our power to secure your data.
 
-If you wish to have your data removed contact us at **haptigation@gmail.com**
+If you wish to have your data removed contact us at **haptigation@gmail.com**. We will do so immediately.
 
-We will do so immediately.
+If you want detailed information on how we use your data see our [Documentation](/docs/General%20Info/data-usage).
 
-If you want more info on how we process your data please see our detailed [Documentation](/docs/General%20Info/data-usage).
+We want to be fully transparent with you in how we use your data and therefore all [programs](https://github.com/Haptigation-Student-Project/Google-Apps-Script) processing your data are public and can be examined by you.
+
+## Google
+
+We use plenty of Google's features to make our project happen.
+Besides that we are not associated with Google at all and fully independant.
 
 ## Contact
 
@@ -218,8 +224,8 @@ For more information about Haptigation feel free to reach out:
 
 **Email:** haptigation@gmail.com
 
-**Newsletter:** Subscribe our Newsletter by leaving your email in our [Menti Surveys](https://www.menti.com/alx5ib81p2uv) or send us a mail confirming interest. 
+**Newsletter:** Subscribe to our Newsletter by leaving your email in our [Menti Surveys](https://www.menti.com/alx5ib81p2uv) or by sending us an email to haptigation@gmail.com confirming interest. 
 
 ---
 
-*Last Updated: Dezember 06, 2025*
+*Last Updated: February, 05th 2025*

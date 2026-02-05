@@ -7,7 +7,7 @@ sidebar_position: 1
 
 # Software Documentation
 
-Our Software documentation is seperated into two segments:
+Our Software documentation is seperated into multiple segments:
 
 1. [Frontend](/docs/category/frontend)
 2. [Google Apps Script](/docs/category/google-apps-script)
