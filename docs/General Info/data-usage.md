@@ -1,6 +1,6 @@
 ---
 title: Data Usage
-sidebar_position: 2
+sidebar_position: 3
 description: "Here you can find out, how we are actually using your data."
 ---
 
