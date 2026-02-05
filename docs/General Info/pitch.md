@@ -65,7 +65,7 @@ Haptigation provides a third modality for navigation through haptic feedback:
 
 ---
 
-## Technical Implementation
+## Technical Implementation 
 
 ### System Architecture
 

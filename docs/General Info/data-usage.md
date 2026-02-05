@@ -17,7 +17,7 @@ The User Data we are saving are as followed:
 - user company relation (eg. interested person, team member, sponsor)
     - Newsletter subsribers default to "interested person" if no information is provided otherwise.
 
-We also store all results from our [Menti Surveys](https://www.menti.com/alx5ib81p2uv).
+We also store all results from our [Menti Surveys](https://www.menti.com/alx5ib81p2uv). 
 
 ## Data Storage
 

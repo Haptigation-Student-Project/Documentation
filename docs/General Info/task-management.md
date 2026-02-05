@@ -19,6 +19,6 @@ We seperated ourselves into hardware and software sub-teams based on interested.
 
 Leadership tasks and work processes are managed by:
 - Patrick: Event Manager (Scrum Master)
-- Sanny: Project Lead (Product Owner)
+- Sanny: Project Lead (Product Owner) 
 
 Decisions are made with the entire team. We don't allow autoritarism :)
