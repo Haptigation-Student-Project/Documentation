@@ -2,7 +2,7 @@
 title: Newsletter Automation
 description: Documentation on the Newsletter Automation logic via Google Apps Script
 hide_table_of_contents: true
-sidebar_position: 2
+sidebar_position: 1
 ---
 
 # Newsletter Automation
@@ -10,11 +10,8 @@ sidebar_position: 2
 ## Overview
 This Google Apps Script automates the process of sending personalized newsletters via Gmail. It reads a draft email containing "Haptigation Newsletter" in the subject line and sends it to all contacts with a specific label, personalizing each email with the recipient's name.
 Implementing it this way ensures data safety and allows for personalization in the newsletter.
-Emojis are not supported.
 
-You can find the script here: [Github](https://github.com/Haptigation-Student-Project/Google-Apps-Script/)
-
-A sample newsletter can be found here: <a href="/Documentation/downloadables/newsletter_template.html" target="_blank">Newsletter Template</a>
+You can find it here: [Github](https://github.com/Haptigation-Student-Project/Google-Apps-Script/)
 
 ---
 
@@ -71,7 +68,9 @@ const CONFIG = {
   contactLabel: "Newsletter Subscriber",    // The label of your newsletter contacts
   senderName: "{Name} von {Company}",       // Shows as "Name von Company via company@gmail.com"
   testMode: true,                           // Set to true for testing, false for live sending
-  debugMode: false                          // Set to true only for debugging (shows unmasked emails)
+  scheduledDate: "2026-02-21",              // YYYY-MM-DD format for scheduled sends 
+  scheduledTime: "16:00"                    // HH:MM 24h format for scheduled sends
+  // If either of both scheduledVariables is not set scheduleNewsletter will not work, sendNewsletter will work regardless though.)
 };
 ```
 
@@ -79,7 +78,8 @@ const CONFIG = {
 - **contactLabel**: The exact name of your Contact Group/Label in Google Contacts
 - **senderName**: Your name that appears as the sender (will be appended with "via [your email]")
 - **testMode**: When `true`, emails are only sent to your own account for testing
-- **debugMode**: When `true`, email addresses are shown unmasked in logs (testing only!)
+- **scheduledDate**: Date for scheduled newsletter sends (YYYY-MM-DD format, e.g., "2026-02-21")
+- **scheduledTime**: Time for scheduled newsletter sends (HH:MM 24h format, e.g., "16:00")
 
 ### Step 4: Save the Script
 Click the disk icon (💾) or press Ctrl+S / Cmd+S to save your changes.
@@ -124,6 +124,14 @@ You can restore the subject line when preparing the next newsletter edition
 ---
 
 ## Features
+
+### Scheduled Sending
+
+- Plan newsletter sends for specific date and time
+- Use `scheduleNewsletter()` to set up automatic sending
+- View scheduled sends with `showScheduledNewsletters()`
+- Cancel scheduled sends with `deleteAllNewsletterTriggers()`
+- Triggers are automatically deleted after successful send
 
 ### Personalization
 
@@ -233,7 +241,13 @@ If you encounter issues:
 - Ensure APIs are enabled
 - Test with testMode: true first
 
+### Email Privacy
+All email addresses are automatically anonymized in logs:
+- `max.mustermann@gmail.com` → `m...@g...com`
+- This protects user privacy in execution logs
+- No configuration needed - always active
+
 ---
-Last updated: December 07, 2025
+Last updated: February 07, 2026
 
 Version: 1.0

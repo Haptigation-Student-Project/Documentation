@@ -2,7 +2,7 @@
 title: Auto Responder
 description: Documentation on the Email Acknowledgement Automation logic via Google Apps Script
 hide_table_of_contents: true
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 # Email Acknowledgement Automation
@@ -54,28 +54,24 @@ You can customize the CONFIG settings at the top of the script:
 const CONFIG = {
   DRAFT_SUBJECT: 'E-Mail Response Automation Draft - DO NOT DELETE',      // Draft subject (must match exactly)
   FEEDBACK_DRAFT_SUBJECT: 'Feedback E-Mail Response Automation Draft - DO NOT DELETE',  // Feedback draft subject
-  TEST_SUBJECT_PREFIX: 'Test: ',                                          // Prefix for test emails
+  TEST_SUBJECT_PREFIXES: ['[TEST]', '[Test]', '[test]', 'TEST:', 'Test:', 'test:'],     // Prefixes for test emails
   FEEDBACK_SUBJECT_PREFIX: 'Feedback zum App-Design',                     // Prefix for feedback emails
   FEEDBACK_REPLY_SUBJECT: 'Vielen Dank für Ihr Feedback',                 // Reply subject for feedback
-  RESPONSE_SUBJECT: 'Re: ',                                               // Reply subject prefix
   MAX_EMAILS_PER_RUN: 50,                                                 // Max emails processed per check
   CHECK_INTERVAL_MINUTES: 1,                                              // How often to check (in minutes)
-  LABEL_NAME: 'AutoResponded',                                            // Label for processed emails
-  debugMode: false                                                        // Debug mode (shows unmasked emails)
+  LABEL_NAME: 'AutoResponded'                                             // Label for processed emails
 };
 ```
 
 **Settings Explained:**
 - **DRAFT_SUBJECT**: The exact subject of your default response draft
 - **FEEDBACK_DRAFT_SUBJECT**: Separate draft for feedback emails (optional)
-- **TEST_SUBJECT_PREFIX**: Emails starting with this are ignored (prevents test email loops)
+- **TEST_SUBJECT_PREFIXES**: Array of prefixes for test emails that should be ignored (e.g., `[TEST]`, `TEST:`, etc.)
 - **FEEDBACK_SUBJECT_PREFIX**: Emails with this prefix receive a separate feedback response
 - **FEEDBACK_REPLY_SUBJECT**: Subject line for feedback responses
-- **RESPONSE_SUBJECT**: Prefix for normal replies (default "Re: " creates "Re: Original Subject")
 - **MAX_EMAILS_PER_RUN**: Limits emails processed per check (prevents quota issues)
 - **CHECK_INTERVAL_MINUTES**: Frequency of checks (1 = every minute, 5 = every 5 minutes, etc.)
 - **LABEL_NAME**: Gmail label applied to processed emails (prevents duplicate responses)
-- **debugMode**: When `true`, emails are shown unmasked in logs (testing only!)
 
 ### Step 4: Save the Script
 Click the disk icon (💾) or press Ctrl+S / Cmd+S to save your changes.
@@ -128,7 +124,7 @@ Prevents duplicates: Once labeled, the script won't respond again to that email
 - **Dual Draft System**: Support for default and feedback-specific response drafts
 - **Emoji Reaction Filter**: Automatically skips emoji reactions (doesn't count as messages to respond to)
 - **Feedback Detection**: Automatically uses a special response draft for feedback emails
-- **Test Email Filter**: Emails starting with "Test: " are automatically ignored (prevents loops)
+- **Test Email Filter**: Emails starting with test prefixes (`[TEST]`, `TEST:`, etc.) are automatically ignored (prevents loops)
 - **Inline Images**: Supports embedded images in your draft - Only supports pictures if added via URL (e.g. [imgur](https://imgur.com) pictures)
 - **HTML Formatting**: Preserves rich text formatting from your draft
 - **Thread-Safe**: Works with email threads/conversations
@@ -209,14 +205,15 @@ The script supports a separate draft for feedback emails:
    ```
 
 ### Filter Out Test Emails
-Emails starting with "Test: " are automatically ignored:
+Emails starting with test prefixes are automatically ignored:
+- Supports multiple prefixes: `[TEST]`, `[Test]`, `[test]`, `TEST:`, `Test:`, `test:`
 - No response will be sent
 - They won't get the "AutoResponded" label
 - Useful for testing your draft without triggering responses
 
-To customize the test prefix:
+To customize the test prefixes:
 ```javascript
-TEST_SUBJECT_PREFIX: 'Test: '  // Change this string to match your test prefix
+TEST_SUBJECT_PREFIXES: ['[TEST]', '[Test]', '[test]', 'TEST:', 'Test:', 'test:']  // Add or remove prefixes as needed
 ```
 
 ### Skip Emoji Reactions
@@ -227,9 +224,12 @@ The script automatically detects and skips emoji reactions:
 
 ### Customize Reply Subject
 
-If: 'Re: ' → "Re: Original Subject" (default, creates standard email reply format)
+By default, the script adds "Re: " to the original subject:
+- "Original Subject" → "Re: Original Subject"
+- "Re: Original Subject" → "Re: Re: Original Subject" (intentional - shows it's a reply to a reply)
 
-If: 'Thank you for your email!' → Uses this exact subject (change content as you wish)
+For feedback emails, a custom subject is used:
+- Subject is set to: "Vielen Dank für Ihr Feedback" (configured in `FEEDBACK_REPLY_SUBJECT`)
 
 ### Adjust Max Emails Per Run
 If you receive high email volume:
@@ -282,7 +282,7 @@ This should not happen - they are automatically filtered:
 ---
 
 ## Advanced Features
-Mark Emails as Read (Optional)
+### Mark Emails as Read (Optional)
 Uncomment this line in the script:
 
 ```javascript
@@ -290,7 +290,13 @@ Uncomment this line in the script:
 ```
 Remove the // to enable auto-marking as read.
 
+### Email Privacy
+All email addresses are automatically anonymized in logs:
+- `max.mustermann@gmail.com` → `m...@g...com`
+- This protects user privacy in execution logs
+- No configuration needed - always active
+
 ---
-Last updated: December 07, 2025
+Last updated: February 07, 2026
 
 Version: 1.0
