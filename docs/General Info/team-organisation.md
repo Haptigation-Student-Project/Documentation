@@ -35,7 +35,7 @@ The following table will aid in assigning an estimate (in Story Points) to our i
 When creating an issue, describe it in a way that everyone understands why it exists and what needs to be done by giving as much context as possible and linking relevant documentation and issues.
 
 Try to stick to the "As, I want, Because" Framework:
-> *Example:*
+> *Example:* 
 >
 > **As** a mother, **I want** my child to eat healthy food **because** it will grow up strong
 

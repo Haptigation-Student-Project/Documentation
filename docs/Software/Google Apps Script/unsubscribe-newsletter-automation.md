@@ -11,7 +11,7 @@ sidebar_position: 3
 This Google Apps Script automates the unsubscription of newsletter subscribers. When someone fills out the Google Form to unsubscribe, it automatically:
 - Removes the contact from the newsletter group
 - Sends a confirmation email
-- Deletes the form response (GDPR compliant)
+- Deletes the form response (GDPR (DSGVO) compliant)
 
 The script is fully GDPR-compliant: email addresses are automatically anonymized in all logs.
 

@@ -1,0 +1,8 @@
+{
+    "label": "Google Maps API",
+    "position": 5,
+    "link": {
+        "type": "generated-index",
+        "description": "Here you can find all documentation related to Google Maps API (https://developers.google.com/maps)."
+    }
+}

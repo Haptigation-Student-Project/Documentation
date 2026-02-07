@@ -37,4 +37,4 @@ motor_patterns = {
 dual_patterns = {
     "u-turn": (200, 200, 2) # Needs to be simultaneously played on both wristbands
 }
-```
+``` 
