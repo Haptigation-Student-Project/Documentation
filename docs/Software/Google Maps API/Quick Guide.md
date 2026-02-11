@@ -18,7 +18,7 @@ sidebar_position: 1
             4. On the right border click on 'Gradle', open 'Tasks', 'Android', (execute) 'Signingreport'
             5. After it completed copy the SHA1 key into your message
 3. Jack-gits-your-hub creates a restriction for your key to access the API
-4. Copy the API key from the [Github repository](https://github.com/Haptigation-Student-Project/Software) **secrets**
+4. Jack-gits-your-hub will send an encrypted message to you containing the API key (the api key is also within the [Github repository](https://github.com/Haptigation-Student-Project/Software) **secrets**)
 5. Paste the API key into 'local.properties' with the name 'MAPS_API_KEY=*secret_key*'
 6. Sync the project within Android Studio by clicking the button 'Sync Project with Gradle Files' on the right
 7. You are ready to go and use the API!
