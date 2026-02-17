@@ -7,7 +7,7 @@ description: "The roadmap can give you a broad overview on what happens when."
 # Roadmap
 
 ## Time Plan
-![Time Planning](/img/timeplan.png)
+![Time Planning](../../static/img/timeplan.png)
 
 ## Overview Hardware
 | Sprint | Todo | Check | Due |

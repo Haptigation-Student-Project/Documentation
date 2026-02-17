@@ -9,11 +9,8 @@ sidebar_position: 1
 
 Our Software documentation is seperated into multiple segments:
 
-1. [Frontend](/docs/category/frontend)
-2. [Backend](/docs/category/backend)
-4. [Research](/docs/category/research)
-3. [Google Apps Script](/docs/category/google-apps-script)
-5. [Google Maps API](/docs/category/google-maps-api)
+1. [Frontend](./Frontend/overview.md)
+2. [Backend](./Backend/Bluetooth/data_format.md)
+4. [Research](./Research/bluetooth.md)
 
-
-Both serve their own purpose, feel free to check them out!
+Feel free to check them out!

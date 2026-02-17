@@ -1,10 +1,10 @@
 ---
-title: Pitch
+title: Overview of the project
 sidebar_position: 1
 description: "Here we would like to give you an overview of the entire project."
 ---
 
-# Pitch
+# Project Overview
 
 ## Overview
 
