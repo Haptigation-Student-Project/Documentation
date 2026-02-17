@@ -6,4 +6,4 @@ sidebar_position: 3
 ---
 
 # Single Wristband Smartwatch Prototype
-Work in progress. 
+This is out of scope for university and will be postponed to a later point in time. 
