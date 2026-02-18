@@ -2,7 +2,7 @@
 title: Components
 description: Documentation on components
 hide_table_of_contents: true
-sidebar_position: 2
+sidebar_position: 1
 ---
 
 # Components
