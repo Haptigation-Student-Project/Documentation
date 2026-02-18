@@ -9,8 +9,7 @@ sidebar_position: 1
 
 Our Software documentation is seperated into multiple segments:
 
-1. [Frontend](./Frontend/overview.md)
-2. [Backend](./Backend/Bluetooth/data_format.md)
-4. [Research](./Research/bluetooth.md)
+1. [Frontend](/docs/category/frontend/)
+2. [Backend](/docs/category/backend/)
 
 Feel free to check them out!

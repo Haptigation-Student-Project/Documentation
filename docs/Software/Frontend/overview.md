@@ -9,12 +9,12 @@ sidebar_position: 2
 
 The frontend documentation is divided into several categories:
 - [Components](./Components/overview.md)
-    - [Navigation bar](navigation_bar.md)
-    - [Top bar](top_bar.md)
+    - [Navigation bar](./Components/navigation_bar.md)
+    - [Top bar](./Components/top_bar.md)
 - [Design Decisions](./Design%20Decisions/overview.md)
-    - [Color sheme](color_sheme.md)
-    - [Icon decision](icon_decision.md)
-    - [Logo](logo.md)
+    - [Color scheme](./Design%20Decisions/color_sheme.md)
+    - [Icon decision](./Design%20Decisions/icon_decision.md)
+    - [Logo](./Design%20Decisions/logo.md)
 - [Functionalities](./Functionalities/overview.md)
-    - [Bluetooth connection](bluetooth_connection.md)
+    - [Bluetooth connection](./Functionalities/bluetooth_connection.md)
 
