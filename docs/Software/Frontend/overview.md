@@ -12,7 +12,7 @@ The frontend documentation is divided into several categories:
     - [Navigation bar](./Components/navigation_bar.md)
     - [Top bar](./Components/top_bar.md)
 - [Design Decisions](./Design%20Decisions/overview.md)
-    - [Color scheme](./Design%20Decisions/color_sheme.md)
+    - [Color scheme](./Design%20Decisions/color_scheme.md)
     - [Icon decision](./Design%20Decisions/icon_decision.md)
     - [Logo](./Design%20Decisions/logo.md)
 - [Functionalities](./Functionalities/overview.md)
