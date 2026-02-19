@@ -9,7 +9,8 @@ sidebar_position: 1
 
 Our Software documentation is seperated into multiple segments:
 
-1. [Frontend](/docs/category/frontend/)
-2. [Backend](/docs/category/backend/)
+1. [Frontend](./Frontend/)
+2. [Backend](./Backend/)
+3. [Research](./Research/)
 
 Feel free to check them out!

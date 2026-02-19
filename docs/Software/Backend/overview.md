@@ -8,4 +8,6 @@ sidebar_position: 1
 # Backend Documentation
 
 In the backend documentation you can find information on the following topics:
-- [Bluetooth](/docs/category/bluetooth)
+- Connection from software to hardware
+- Bluetooth-Connection
+- Google Maps adaption
