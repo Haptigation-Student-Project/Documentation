@@ -1,0 +1,102 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.documentationSidebar.category.General Info": {
+    "message": "General Info",
+    "description": "The label for category 'General Info' in sidebar 'documentationSidebar'"
+  },
+  "sidebar.documentationSidebar.category.General Info.link.generated-index.description": {
+    "message": "The following pages include organisational structure, guidelines and informations on \"Haptigation\" - Feel free to explore!",
+    "description": "The generated-index page description for category 'General Info' in sidebar 'documentationSidebar'"
+  },
+  "sidebar.documentationSidebar.category.Hardware": {
+    "message": "Hardware",
+    "description": "The label for category 'Hardware' in sidebar 'documentationSidebar'"
+  },
+  "sidebar.documentationSidebar.category.Hardware.link.generated-index.description": {
+    "message": "Here you can find all information about the hardware prototypes developed for haptigation released to public.",
+    "description": "The generated-index page description for category 'Hardware' in sidebar 'documentationSidebar'"
+  },
+  "sidebar.documentationSidebar.category.Prototypes": {
+    "message": "Prototypes",
+    "description": "The label for category 'Prototypes' in sidebar 'documentationSidebar'"
+  },
+  "sidebar.documentationSidebar.category.Prototypes.link.generated-index.description": {
+    "message": "All hardware prototypes developed for the Haptigation project.",
+    "description": "The generated-index page description for category 'Prototypes' in sidebar 'documentationSidebar'"
+  },
+  "sidebar.documentationSidebar.category.Software": {
+    "message": "Software",
+    "description": "The label for category 'Software' in sidebar 'documentationSidebar'"
+  },
+  "sidebar.documentationSidebar.category.Software.link.generated-index.description": {
+    "message": "The Software Documentation is coming as soon as we have intel to share with you :)",
+    "description": "The generated-index page description for category 'Software' in sidebar 'documentationSidebar'"
+  },
+  "sidebar.documentationSidebar.category.Frontend": {
+    "message": "Frontend",
+    "description": "The label for category 'Frontend' in sidebar 'documentationSidebar'"
+  },
+  "sidebar.documentationSidebar.category.Frontend.link.generated-index.description": {
+    "message": "Here you can find all documentation related to our frontend.",
+    "description": "The generated-index page description for category 'Frontend' in sidebar 'documentationSidebar'"
+  },
+  "sidebar.documentationSidebar.category.Components": {
+    "message": "Components",
+    "description": "The label for category 'Components' in sidebar 'documentationSidebar'"
+  },
+  "sidebar.documentationSidebar.category.Design Decisions": {
+    "message": "Design Decisions",
+    "description": "The label for category 'Design Decisions' in sidebar 'documentationSidebar'"
+  },
+  "sidebar.documentationSidebar.category.Functionalities": {
+    "message": "Functionalities",
+    "description": "The label for category 'Functionalities' in sidebar 'documentationSidebar'"
+  },
+  "sidebar.documentationSidebar.category.Backend": {
+    "message": "Backend",
+    "description": "The label for category 'Backend' in sidebar 'documentationSidebar'"
+  },
+  "sidebar.documentationSidebar.category.Backend.link.generated-index.description": {
+    "message": "Here you can find all documentation related to our backend.",
+    "description": "The generated-index page description for category 'Backend' in sidebar 'documentationSidebar'"
+  },
+  "sidebar.documentationSidebar.category.Bluetooth": {
+    "message": "Bluetooth",
+    "description": "The label for category 'Bluetooth' in sidebar 'documentationSidebar'"
+  },
+  "sidebar.documentationSidebar.category.Bluetooth.link.generated-index.description": {
+    "message": "Here you can find all documentation related to our Bluetooth backend including research.",
+    "description": "The generated-index page description for category 'Bluetooth' in sidebar 'documentationSidebar'"
+  },
+  "sidebar.documentationSidebar.category.Research": {
+    "message": "Research",
+    "description": "The label for category 'Research' in sidebar 'documentationSidebar'"
+  },
+  "sidebar.documentationSidebar.category.Research.link.generated-index.description": {
+    "message": "Here you can find all documentation related to research topics.",
+    "description": "The generated-index page description for category 'Research' in sidebar 'documentationSidebar'"
+  },
+  "sidebar.documentationSidebar.category.Google Integration": {
+    "message": "Google Integration",
+    "description": "The label for category 'Google Integration' in sidebar 'documentationSidebar'"
+  },
+  "sidebar.documentationSidebar.category.Google Maps API": {
+    "message": "Google Maps API",
+    "description": "The label for category 'Google Maps API' in sidebar 'documentationSidebar'"
+  },
+  "sidebar.documentationSidebar.category.Google Maps API.link.generated-index.description": {
+    "message": "Here you can find all documentation related to Google Maps API (https://developers.google.com/maps).",
+    "description": "The generated-index page description for category 'Google Maps API' in sidebar 'documentationSidebar'"
+  },
+  "sidebar.documentationSidebar.category.Google Apps Script": {
+    "message": "Google Apps Script",
+    "description": "The label for category 'Google Apps Script' in sidebar 'documentationSidebar'"
+  },
+  "sidebar.documentationSidebar.category.Google Apps Script.link.generated-index.description": {
+    "message": "Here you can find all documentation related to Google Apps Script (https://script.google.com/). Gmail made professional.",
+    "description": "The generated-index page description for category 'Google Apps Script' in sidebar 'documentationSidebar'"
+  }
+}
