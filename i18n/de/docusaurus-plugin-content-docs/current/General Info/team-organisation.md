@@ -35,12 +35,12 @@ Die folgende Tabelle hilft bei der Zuordnung einer Schätzung (in Story Points) 
 | **13** | Episch | > 2 Tage | **STOPP.** Zu groß. Sofort in kleinere Aufgaben aufteilen. |
 
 ### Issues erstellen
-Beschreiben Sie ein Issue so, dass jeder versteht, warum es existiert und was getan werden muss, indem Sie so viel Kontext wie möglich geben und relevante Dokumentation und Issues verlinken.
+Wie beschreiben Issues so, dass jeder verstehen kann, warum es existiert und was getan werden muss, indem Sie so viel Kontext wie möglich geben und relevante Dokumentation und Issues verlinken.
 
 Versuchen Sie, sich an das "Als, Ich möchte, Weil"-Framework zu halten:
 > *Beispiel:* 
 >
-> **Als** Mutter **möchte ich**, dass mein Kind gesund isst, **weil** es stark aufwachsen wird
+> **Als** Mutter **möchte ich**, dass mein Kind gesund isst, **weil** es stark aufwachsen soll
 
 Setzen Sie einen **Typ** entsprechend dessen, was es ist:
 - Task: Ein einzelnes Stück Arbeit (das begonnen werden kann)

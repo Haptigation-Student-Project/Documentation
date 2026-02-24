@@ -8,7 +8,7 @@ sidebar_position: 1
 
 Dieses Dokumentations-Repository dient als Hauptquelle des gemeinsamen Wissens für unser Projekt "Haptigation". 
 
-Hier wollen wir sammeln:
+Hier werden folgende Themenblöcke gesammelt:
 
 - [Allgemeine Informationen](./General%20Info/project-overview.md)
 - [Hardware-Dokumentation](./Hardware/overview.md)

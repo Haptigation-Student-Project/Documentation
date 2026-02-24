@@ -29,6 +29,6 @@ description: "Die Roadmap kann Ihnen einen umfassenden Überblick geben, was wan
 |1|Erste App erstellen|Abgeschlossen|18.01.26|
 |2|IoT-Plattform aufbauen|Abgeschlossen|30.01.26|
 |3,4|Google Maps SDK und Karte implementieren|In Bearbeitung|01.03.26|
-|3,4|Einstellungslogik erstellen|Erledigt|01.03.26
+|3,4|Einstellungslogik erstellen|Erledigt|01.03.26|
 |3,4|Frontend erstellen|In Bearbeitung|01.03.26|
 |4|Im Google Playstore hochladen|Zu erledigen|01.03.26|

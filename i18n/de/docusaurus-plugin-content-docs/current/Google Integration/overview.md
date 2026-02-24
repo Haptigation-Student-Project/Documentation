@@ -8,7 +8,7 @@ sidebar_position: 1
 
 Das Konzept von Haptigation wäre ohne die Integration von Google nicht möglich. 
 
-Obwohl wir rechtlich nicht verbunden sind, sind wir stark von ihren Diensten in Bezug auf Google Maps SDK und Gmail abhängig.
+Obwohl wir rechtlich vollständig unabhängig von Google sind, sind wir stark von ihren Diensten in Bezug auf Google Maps SDK und Gmail abhängig.
 
 Möchten Sie herausfinden, wie wir es nutzen? Hier finden Sie unsere zugehörigen Dokumentationen:
 - [Google Maps API](/docs/category/google-maps-api)

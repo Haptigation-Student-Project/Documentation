@@ -8,7 +8,7 @@ description: "Hier möchten wir Ihnen einen Überblick über das gesamte Projekt
 
 ## Überblick
 
-Haptigation ist ein **haptisches Navigationssystem**, das Schritt-für-Schritt-Anweisungen durch Vibrationsfeedback bereitstellt und es Benutzern ermöglicht, zu navigieren, ohne sich auf visuelle oder akustische Hinweise zu verlassen. Das System besteht aus einem oder zwei **Vibrations-Armbändern**, die mit einer mobilen Anwendung gekoppelt sind, und bietet eine **intuitive und zugängliche Navigationslösung** für Biker, Radfahrer, sehbehinderte und hörbehinderte Personen sowie andere Benutzer, die ihre Augen und Ohren für sicherheitskritische Aufgaben beim Navigieren frei haben müssen.
+Haptigation ist ein **haptisches Navigationssystem**, das Schritt-für-Schritt-Anweisungen durch Vibrationsfeedback bereitstellt und es Benutzern ermöglicht, zu navigieren, ohne sich auf visuelle oder akustische Hinweise zu verlassen. Das System besteht aus einem oder zwei **Vibrations-Armbändern**, die mit einer mobilen Anwendung gekoppelt sind, und bietet eine **intuitive und zugängliche Navigationslösung** für Biker, Radfahrer, seh- und höreingeschränkte Personen sowie andere Benutzer, die ihre Augen und Ohren für sicherheitskritische Aufgaben beim Navigieren frei haben müssen.
 
 **Kernkonzept:** "Vibriert links, geh nach links. Vibriert rechts, geh nach rechts."
 
@@ -28,7 +28,7 @@ Moderne Navigationssysteme stellen in bestimmten Kontexten erhebliche Sicherheit
 
 Radfahrer und Biker stehen vor einem gefährlichen Dilemma: Sie benötigen Navigationsführung und gleichzeitig vollständige visuelle und akustische Wahrnehmung ihrer Umgebung. Aktuelle Lösungen zwingen Benutzer dazu, ihre Sicherheit zu gefährden, indem sie die Aufmerksamkeit auf Bildschirme lenken oder Umgebungsgeräusche mit Kopfhörern blockieren.
 
-Sehbehinderte und hörbehinderte Personen haben eine besondere Herausforderung bei der Navigation:
+Seh- und höreingeschränkte Personen haben eine besondere Herausforderung bei der Navigation:
 
 Sie benötigen oft externe Hilfe, die wir teilweise bereitstellen können.
 
@@ -55,7 +55,7 @@ Haptigation bietet eine dritte Modalität für die Navigation durch haptisches F
 - Höchstes Sicherheitsrisiko bei traditioneller Navigation
 - Starker Bedarf an freihändiger, augenfreier Navigation
 
-**Sekundäre Zielgruppe:** Sehbehinderte oder hörbehinderte Personen
+**Sekundäre Zielgruppe:** Seh- oder höreingeschränkte Personen
 - Barrierefreie Lösung für Navigationsherausforderungen
 - Alternative sensorische Modalität für Führung
 
@@ -176,11 +176,11 @@ Im Vergleich zu bestehenden Lösungen:
 | Preis | 100+ € | Max. 25 € pro Armband |
 | Konfiguration | Einzelnes Armband | Bilateral (zwei Armbänder) |
 | Bedienung | Komplex, mehrschichtig | Einfach und intuitiv |
-| Zielmarkt | Nur Sehbehinderte | Mehrere Segmente |
+| Zielmarkt | Nur Seheingeschränkte | Mehrere Segmente |
 
 ### Alleinstellungsmerkmale
 
-- **Bilaterales System:** Zwei Armbänder bieten klarere Richtungshinweise
+- **Dual-System:** Zwei Armbänder bieten klarere Richtungshinweise
 - **Einfachheit:** Intuitive Bedienung mit minimalem Schulungsaufwand
 - **Erschwinglichkeit:** Wir möchten das Produkt für alle sozialen Schichten zugänglich machen
 - **Agilität:** Kleines, praktisch arbeitendes Team ermöglicht schnelle Iteration und Verbesserung
