@@ -1,0 +1,58 @@
+{
+  "link.title.Documentation": {
+    "message": "Dokumentation",
+    "description": "The title of the footer links column with title=Documentation in the footer"
+  },
+  "link.title.Docusaurus": {
+    "message": "Docusaurus",
+    "description": "The title of the footer links column with title=Docusaurus in the footer"
+  },
+  "link.title.References": {
+    "message": "Referenzen",
+    "description": "The title of the footer links column with title=References in the footer"
+  },
+  "link.item.label.Start": {
+    "message": "Start",
+    "description": "The label of footer link with label=Start linking to docs/start"
+  },
+  "link.item.label.Organisation": {
+    "message": "Organisation",
+    "description": "The label of footer link with label=Organisation linking to docs/category/general-info"
+  },
+  "link.item.label.Hardware": {
+    "message": "Hardware",
+    "description": "The label of footer link with label=Hardware linking to docs/category/hardware"
+  },
+  "link.item.label.Software": {
+    "message": "Software",
+    "description": "The label of footer link with label=Software linking to docs/category/software"
+  },
+  "link.item.label.Stack Overflow": {
+    "message": "Stack Overflow",
+    "description": "The label of footer link with label=Stack Overflow linking to https://stackoverflow.com/questions/tagged/docusaurus"
+  },
+  "link.item.label.Discord": {
+    "message": "Discord",
+    "description": "The label of footer link with label=Discord linking to https://discordapp.com/invite/docusaurus"
+  },
+  "link.item.label.X": {
+    "message": "X",
+    "description": "The label of footer link with label=X linking to https://x.com/docusaurus"
+  },
+  "link.item.label.Team": {
+    "message": "Team",
+    "description": "The label of footer link with label=Team linking to /team"
+  },
+  "link.item.label.Menti": {
+    "message": "Menti",
+    "description": "The label of footer link with label=Menti linking to https://www.menti.com/alx5ib81p2uv"
+  },
+  "link.item.label.GitHub": {
+    "message": "GitHub",
+    "description": "The label of footer link with label=GitHub linking to https://github.com/facebook/docusaurus"
+  },
+  "copyright": {
+    "message": "Copyright © 2026 Haptigation. Erstellt mit Docusaurus.",
+    "description": "The footer copyright"
+  }
+}

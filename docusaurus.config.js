@@ -11,8 +11,8 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Haptigation',
-  tagline: 'Feel the right way.',
-  favicon: 'img/favicon.ico',
+  tagline: 'Feeling the right way.',
+  favicon: 'img/HaptigationLogo.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -38,7 +38,19 @@ const config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en', 'de'],
+    localeConfigs: {
+      en: {
+        label: 'English',
+        direction: 'ltr',
+        htmlLang: 'en-US',
+      },
+      de: {
+        label: 'Deutsch',
+        direction: 'ltr',
+        htmlLang: 'de-DE',
+      },
+    },
   },
 
   presets: [
@@ -88,7 +100,7 @@ const config = {
         title: 'Haptigation',
         logo: {
           alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          src: 'img/HaptigationLogo.svg',
         },
         items: [
           {
