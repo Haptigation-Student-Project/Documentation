@@ -11,6 +11,8 @@ sidebar_position: 3
 This Google Apps Script automates the process of sending personalized newsletters via Gmail. It reads a draft email containing "Haptigation Newsletter" in the subject line and sends it to all contacts with a specific label, personalizing each email with the recipient's name.
 Implementing it this way ensures data safety and allows for personalization in the newsletter.
 
+If you would like a working Newsletter-Template please contact [haptigation@gmail.com](mailto:haptigation@gmail.com?subject=Request%20Newsletter-Template).
+
 You can find it here: [Github](https://github.com/Haptigation-Student-Project/Google-Apps-Script/)
 
 ---
