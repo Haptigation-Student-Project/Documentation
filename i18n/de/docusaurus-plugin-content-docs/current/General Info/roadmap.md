@@ -1,6 +1,6 @@
 ---
 title: Roadmap
-sidebar_position: 2
+sidebar_position: 1
 description: "Die Roadmap kann Ihnen einen umfassenden Überblick geben, was wann passiert."
 ---
 

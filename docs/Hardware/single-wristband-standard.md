@@ -9,16 +9,19 @@ sidebar_position: 2
 For confidentiality reasons, no code will be shared but the used patterns.
 
 ## Example patterns
+## Example patterns
 ```python
-# GROUP 1: Regular patterns to play on only one motor
+# Regular patterns to play on only one motor
 single_motor_patterns = {
     "1": (100, 100, 5),    # Very short, rapid pulses - turn very soon
     "2": (150, 300, 3),    # Spaced pulses - turn approaching
     "single": (500, 0, 1), # Single long vibration - turn now
 }
 
-# GROUP 2: Special patterns to play on both motors simulataneously
+# Special patterns to play on both motors simulataneously
 dual__motor_patterns = {
-    "u-turn": (200, 200, 2) # Needs to be simultaneously played on both wristbands
+    "u-turn": (200, 200, 2),          # Needs to be simultaneously played on both wristbands
+    "wrong": (150, 150, 4),           # Rapid pulses indicate wrong direction/input
+    "recalculating": (250, 150, 2),   # Medium pulses indicate system is recalculating route
 }
 ``` 

@@ -1,11 +1,11 @@
 ---
-title: Unsubscribe Automation 
+title: Unsubscribe Newsletter
 description: Documentation for automatic newsletter unsubscribe via Google Apps Script
 hide_table_of_contents: true
-sidebar_position: 3
+sidebar_position: 2
 ---
 
-# Newsletter Unsubscribe Automation
+# Unsubscribe Newsletter Automation
 
 ## Overview
 This Google Apps Script automates the unsubscription of newsletter subscribers. When someone fills out the Google Form to unsubscribe, it automatically:
@@ -253,7 +253,7 @@ On errors, the admin automatically receives an email
 
 Change the admin email in the function `notifyAdminAboutError()`:
 ```javascript
-const adminEmail = "your-admin-email@example.com"
+CONFIG.adminEmail = "admin@example.com"
 ```
 
 ### Adjust sender name

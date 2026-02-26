@@ -1,6 +1,6 @@
 ---
 title: Aufgabenverwaltung
-sidebar_position: 4
+sidebar_position: 3
 description: "Ein kleiner Einblick in unsere Aufgabenverwaltungsstruktur."
 
 ---

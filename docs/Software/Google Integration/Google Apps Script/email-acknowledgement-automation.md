@@ -1,8 +1,8 @@
 ---
-title: Auto Responder
+title: Email Acknowledgement
 description: Documentation on the Email Acknowledgement Automation logic via Google Apps Script
 hide_table_of_contents: true
-sidebar_position: 2
+sidebar_position: 1
 ---
 
 # Email Acknowledgement Automation
@@ -297,6 +297,6 @@ All email addresses are automatically anonymized in logs:
 - No configuration needed - always active
 
 ---
-Last updated: February 07, 2026
+Last updated: February 23, 2026
 
-Version: 1.0
+Version: 1.4

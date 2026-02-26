@@ -2,7 +2,7 @@
 title: Newsletter Automation
 description: Documentation on the Newsletter Automation logic via Google Apps Script
 hide_table_of_contents: true
-sidebar_position: 1
+sidebar_position: 3
 ---
 
 # Newsletter Automation
@@ -248,6 +248,6 @@ All email addresses are automatically anonymized in logs:
 - No configuration needed - always active
 
 ---
-Last updated: February 07, 2026
+Last updated: February 26, 2026
 
-Version: 1.0
+Version: 1.3

@@ -1,5 +1,5 @@
 ---
-title: User Data Deletion Automation
+title: Delete User Data
 description: Documentation for automatic deletion of user data in Gmail and Google Contacts
 hide_table_of_contents: true
 sidebar_position: 4
@@ -70,6 +70,7 @@ const CONFIG = {
   TESTMAIL: "test@gmail.com",                            // Replace with the real email you want to test with
   DRAFT_SUBJECT: 'Confirm User Data Deletion Draft - DO NOT DELETE',  // Draft subject in Gmail
   FINAL_EMAIL_SUBJECT: 'Wir haben ihre Nutzerdaten gelöscht',         // Subject of the sent email
+  ADMINEMAIL: "haptigation@gmail.com"                    // Admin email for error notifications
 };
 ```
 
@@ -80,6 +81,7 @@ const CONFIG = {
 * **TESTMAIL**: Test email address for functions like `testConfirmationEmail()` and `listContactsForEmail()`
 * **DRAFT_SUBJECT**: Subject of the draft template for confirmation email (DO NOT change!)
 * **FINAL_EMAIL_SUBJECT**: Subject line of the confirmation email sent to the user
+* **ADMINEMAIL**: Email address of the administrator who will be automatically notified in case of errors
 * **DEBUG_MODE**: When `true`, full emails are logged (testing only!) - shows full email addresses instead of anonymized; set back to false for production
 
 ### Step 3: Save the script
@@ -171,6 +173,11 @@ The script performs the following steps:
 - Deletion continues where possible
 - Confirmation email errors do not stop deletion
 - Detailed error logs for debugging
+- **Automatic admin notification**: In case of critical errors, the administrator (configured in `ADMINEMAIL`) is automatically notified via email with:
+  - Error timestamp
+  - Anonymized email address of the affected user
+  - Error message and stack trace
+  - Request for manual verification
 
 ---
 ## GDPR Compliance
@@ -207,6 +214,25 @@ DEBUG_MODE: true  // Shows full emails in logs
 ```
 
 **IMPORTANT:** Set back to `false` after testing!
+
+### Admin Notifications
+In case of critical errors during the deletion process, an automatic notification is sent to the configured administrator.
+
+**How it works:**
+- Automatic email sent on severe errors in `deleteAllDataForEmail()`
+- Admin email address is configured in `CONFIG.ADMINEMAIL`
+- Notification contains:
+  - Error timestamp
+  - Anonymized email address (privacy even in error messages)
+  - Complete error message and stack trace
+  - Request for manual verification of the deletion
+
+**Configure admin email:**
+```javascript
+CONFIG.ADMINEMAIL = "admin@example.com"  // Your admin email
+```
+
+**Note:** If the admin notification itself fails, this is logged but the deletion process is not aborted.
 
 ---
 

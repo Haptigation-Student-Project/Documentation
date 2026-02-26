@@ -1,6 +1,6 @@
 ---
 title: Datennutzung
-sidebar_position: 3
+sidebar_position: 2
 description: "Hier können Sie herausfinden, wie wir Ihre Daten tatsächlich verwenden."
 ---
 
@@ -52,10 +52,10 @@ Unsere Datenerfassung hat drei Zwecke:
 
 In [Google Apps Script](https://script.google.com) verwenden wir die oben genannten Daten für vier Dinge:
 
-1. Automatische E-Mail-Bestätigungsantworten.               -> Detaillierte Infos hier: [Dokumentation](/docs/Google%20Integration/Google%20Apps%20Script/email-acknowledgement-automation)
-2. Versenden des Newsletters an Sie.                         -> Detaillierte Infos hier: [Dokumentation](/docs/Google%20Integration/Google%20Apps%20Script/newsletter-automation)
-3. Abmeldung vom Newsletter.                                 -> Detaillierte Infos hier: [Dokumentation](/docs/Google%20Integration/Google%20Apps%20Script/unsubscribe-newsletter-automation)
-4. Löschen aller benutzerbezogenen Daten aus unseren Google-Systemen. -> Detaillierte Infos hier: [Dokumentation](/docs/Google%20Integration/Google%20Apps%20Script/user-data-deletion-automation)
+1. Automatische E-Mail-Bestätigungsantworten.               -> Detaillierte Infos hier: [Dokumentation](/docs/Software/Google%20Integration/Google%20Apps%20Script/email-acknowledgement-automation)
+2. Versenden des Newsletters an Sie.                         -> Detaillierte Infos hier: [Dokumentation](/docs/Software/Google%20Integration/Google%20Apps%20Script/newsletter-automation)
+3. Abmeldung vom Newsletter.                                 -> Detaillierte Infos hier: [Dokumentation](/docs/Software/Google%20Integration/Google%20Apps%20Script/unsubscribe-newsletter-automation)
+4. Löschen aller benutzerbezogenen Daten aus unseren Google-Systemen. -> Detaillierte Infos hier: [Dokumentation](/docs/Software/Google%20Integration/Google%20Apps%20Script/user-data-deletion-automation)
 
 In allen Fällen wird Ihre E-Mail niemals an Personen ohne Zugriff auf das haptigation@gmail.com Gmail-Konto weitergegeben und ist daher DSGVO-konform.
 

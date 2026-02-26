@@ -4,7 +4,7 @@ description: Documentation on the icon design decision
 hide_table_of_contents: false
 sidebar_position: 3
 ---
-In my opinion icons should be easy to unterstand und minimalistic. We also wanted to keep our color theme and resuse it for the icons.
+Icons should be easy to unterstand und minimalistic. We also wanted to keep our color theme and resuse it for the icons.
 That is why our choice for icons is intentionally minimalistic:
 
 One example can already be found in the onboarding pages:
