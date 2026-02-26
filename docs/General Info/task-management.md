@@ -1,6 +1,6 @@
 ---
 title: Task Management
-sidebar_position: 4
+sidebar_position: 3
 description: "A little bit of insights into our Task Management Structure."
 
 ---

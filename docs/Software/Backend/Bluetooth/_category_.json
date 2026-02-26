@@ -1,8 +1,8 @@
 {
     "label": "Bluetooth",
-    "position": 2,
+    "position": 1,
     "link": {
         "type": "generated-index",
-        "description": "Here you can find all documentation related to our Bluetooth backend including research."
+        "description": "Here you can find all documentation related to Bluetooth implementation in the backend."
     }
 }
