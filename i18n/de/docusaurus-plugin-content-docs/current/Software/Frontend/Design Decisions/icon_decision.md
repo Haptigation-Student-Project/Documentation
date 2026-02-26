@@ -9,10 +9,10 @@ Deshalb ist unsere Wahl für Icons bewusst minimalistisch:
 
 Ein Beispiel findet sich bereits auf den Onboarding-Seiten:
 
-![Nicht verbundenes Bluetooth](../../../../static/img/not_connected.png)
+![Nicht verbundenes Bluetooth](/img/not_connected.png)
 
 Dieses erste Bild zeigt, dass das mobile Gerät noch nicht mit Bluetooth verbunden ist
 
-![Verbundenes Bluetooth](../../../../static/img/connected.png)
+![Verbundenes Bluetooth](/img/connected.png)
 
 Dieses zweite Bild zeigt, dass die Bluetooth-Verbindung besteht und der Benutzer fortfahren kann

@@ -4,7 +4,7 @@ description: Dokumentation zur oberen Leistenkomponente
 hide_table_of_contents: false
 sidebar_position: 3
 ---
-![Vollständige obere Leiste](../../../../static/img/top_bar.png)
+![Vollständige obere Leiste](/img/top_bar.png)
 
 
 Die obere Leiste besteht aus zwei Teilen:

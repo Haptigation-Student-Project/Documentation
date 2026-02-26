@@ -226,7 +226,7 @@ Please use the following google form to allow users to do so.
 The form is hooked up to a script that fully automates the unsubscribing process.
 
 More information can be found here: 
-- [Docusaurus](/docs/Google%20Integration/Google%20Apps%20Script/unsubscribe-newsletter-automation)
+- [Docusaurus](/docs/Software/Google%20Integration/Google%20Apps%20Script/unsubscribe-newsletter-automation)
 - [Github](https://github.com/Haptigation-Student-Project/Google-Apps-Script)
 
 Also please include the links to our [Docusaurus](/), [Github](https://github.com/Haptigation-Student-Project) and [Menti Surveys](https://www.menti.com/alx5ib81p2uv) and maybe soon as well website (??)

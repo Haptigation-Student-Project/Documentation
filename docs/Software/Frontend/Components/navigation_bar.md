@@ -5,7 +5,7 @@ hide_table_of_contents: false
 sidebar_position: 2
 ---
 
-![Navigation Bar](../../../../static/img/navigation_bar.png)
+![Navigation Bar](/img/navigation_bar.png)
 
 The most important thing of the navigation bar is to navigate through the page. Our Navigation bar has three tabs:
 - Profile
