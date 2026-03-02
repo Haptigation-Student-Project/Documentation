@@ -215,7 +215,7 @@ We are not interested in harming you in any way by taking advantage of your data
 
 Therefore we will do everything in our power to secure your data.
 
-If you wish to have your data removed contact us at **haptigation@gmail.com**. We will do so immediately.
+If you wish to have your data removed contact us as [stated below](/docs/start#contact). We will do so immediately.
 
 If you want detailed information on how we use your data see our [Documentation](/docs/General%20Info/data-usage).
 
@@ -228,17 +228,17 @@ Haptigation is an indepandant student project relying on private sponsorships.
 We are not startup and not an organization.
 
 We use plenty of Google LLC's services as we are dependant on them. 
-We are not legally associated with Google LLC in any way.
+We are not legally associated with Google in any way.
 
 Thanks Google for making our project possible!
 
 ## Contact
 
-For more information about Haptigation feel free to reach out:
+For more information on Haptigation or for feedback feel free to reach out to us:
 
 **Email:** haptigation@gmail.com
 
-**Newsletter:** Subscribe to our Newsletter by leaving your email in our [Menti Surveys](https://www.menti.com/alx5ib81p2uv) or by sending us an email to haptigation@gmail.com confirming interest. 
+**Newsletter:** Subscribe to our Newsletter by leaving your email in our [Menti Surveys](https://www.menti.com/alx5ib81p2uv) or by sending us an [email](mailto:haptigation@gmail.com?subject=Newsletter%20Subscription). 
 
 ---
 
