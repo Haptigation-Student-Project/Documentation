@@ -50,32 +50,32 @@ Since the Sprints we use are only rough timeframes to document our progress, any
 ## Project Board
 We organize our issues on a central project board on GitHub.
 ### Status
-#### Backlog
+#### 📦 Backlog
 A collection of tasks that are on hold, future improvements or future sprint stuff.
-#### Todo 
+#### 📋 Todo 
 A Task that is ready to be worked on. People may reserve issues for themselves (preference), but anyone can still pick them up and work on them. Make sure the assigned person has not yet started working and forgot to update the status!
 
 DON'T reserve tasks when you have plenty of things to do and won't start working on them any time soon.
-#### In Progress
+#### 🚧 In Progress
 Something is cooking! Someone has started working on this task.
 If you are absent for some time, please hand the task over to someone else, so it can be worked on by someone else while you're gone.
-#### Done
+#### ✅ Done
 The task is finished. Go get some coffee ☕
-#### Continuous
+#### 🔄 Continuous
 Anything that is sort of always in progress. Serves more of a reminder or something.
 ### Labels
 These help us break things down into categories. Remember, that Issues also belong to Repositories, so you don't really have to label something as "documentation" when the issue is in the documentation repo. Use those repos as the "Domain"
 
 The following should be the most commonly used labels, but you may introduce new ones as you see fit. Try to use existing ones as good as possible.
-#### Feature
+#### ✨ Feature
 Creating something new.
-#### Bug
+#### 🐛 Bug
 Something isn't working as it is supposed to. Time to fix it!
-#### Maintenance
+#### 🔧 Maintenance
 Making existing stuff better; refactoring, cleaning up, streamlining
-#### Research
+#### 🔍 Research
 Something needs to be researched. Find relevant information so we can make good desicions down the line. Don't forget to document your findings somewhere!
-#### University
+#### 🎓 University
 Stuff that isn't immediately related to the project, but still needs to be done
-#### Blocked
+#### 🚫 Blocked
 There is a field "Blocked by" in GitHub. Please use it accordingly

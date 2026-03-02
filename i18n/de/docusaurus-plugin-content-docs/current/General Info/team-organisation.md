@@ -54,32 +54,32 @@ Da die Sprints, die wir verwenden, nur grobe Zeiträume zur Dokumentation unsere
 ## Projektboard
 Wir organisieren unsere Issues auf einem zentralen Projektboard auf GitHub.
 ### Status
-#### Backlog
+#### 📦 Backlog
 Eine Sammlung von Aufgaben, die auf Eis liegen, zukünftige Verbesserungen oder zukünftige Sprint-Sachen.
-#### Todo 
+#### 📋 Todo 
 Eine Aufgabe, die bereit ist, bearbeitet zu werden. Personen können Issues für sich selbst reservieren (Präferenz), aber jeder kann sie trotzdem aufgreifen und daran arbeiten. Stellen Sie sicher, dass die zugewiesene Person noch nicht mit der Arbeit begonnen hat und vergessen hat, den Status zu aktualisieren!
 
 Reservieren Sie KEINE Aufgaben, wenn Sie viele Dinge zu tun haben und diese nicht bald beginnen werden.
-#### In Progress
+#### 🚧 In Progress
 Es tut sich was! Jemand hat mit der Arbeit an dieser Aufgabe begonnen.
 Wenn Sie für einige Zeit abwesend sind, übergeben Sie die Aufgabe bitte an jemand anderen, damit sie von jemand anderem bearbeitet werden kann, während Sie weg sind.
-#### Done
+#### ✅ Done
 Die Aufgabe ist erledigt. Holen Sie sich einen Kaffee ☕
-#### Continuous
+#### 🔄 Continuous
 Alles, was sozusagen immer in Bearbeitung ist. Dient eher als Erinnerung oder so.
 ### Labels
 Diese helfen uns, Dinge in Kategorien aufzuteilen. Denken Sie daran, dass Issues auch zu Repositories gehören, also müssen Sie nicht wirklich etwas als "Dokumentation" kennzeichnen, wenn das Issue im Dokumentations-Repo ist. Verwenden Sie diese Repos als "Domain"
 
 Die folgenden sollten die am häufigsten verwendeten Labels sein, aber Sie können neue einführen, wie Sie es für richtig halten. Versuchen Sie, bestehende so gut wie möglich zu verwenden.
-#### Feature
+#### ✨ Feature
 Etwas Neues erstellen.
-#### Bug
+#### 🐛 Bug
 Etwas funktioniert nicht wie es soll. Zeit, es zu reparieren!
-#### Maintenance
+#### 🔧 Maintenance
 Bestehendes verbessern; Refactoring, Aufräumen, Optimierung
-#### Research
+#### 🔍 Research
 Etwas muss recherchiert werden. Finden Sie relevante Informationen, damit wir gute Entscheidungen treffen können. Vergessen Sie nicht, Ihre Erkenntnisse irgendwo zu dokumentieren!
-#### University
+#### 🎓 University
 Sachen, die nicht unmittelbar mit dem Projekt zusammenhängen, aber trotzdem erledigt werden müssen
-#### Blocked
+#### 🚫 Blocked
 Es gibt ein Feld "Blocked by" in GitHub. Bitte verwenden Sie es entsprechend
