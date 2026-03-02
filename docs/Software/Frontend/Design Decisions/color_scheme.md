@@ -37,6 +37,10 @@ Characteristics:
 - Dark text for readability
 - Subtle shadows and elevation
 
+#### Example – Light Mode
+
+![Light Mode](/img/profile_lightmode.png)
+
 ### Dark Mode
 Optimized for low-light environments and reduced eye strain.
 
@@ -46,6 +50,9 @@ Characteristics:
 - Elevated elements through color instead of shadow
 - Muted secondary colors
 
+#### Example – Dark Mode
+
+![Dark Mode](/img/profile_darkmode.png)
 ---
 
 ## Core Color Roles
@@ -62,9 +69,9 @@ Used for branding and key UI highlights.
 - Active navigation indicators
 - Primary accents
 
-Example:
-- Gradient from blue → teal communicates connectivity and motion.
+#### Example – Primary Gradient Usage
 
+![Primary Gradient](/img/onboarding.png)
 ---
 
 ### Background
