@@ -186,10 +186,6 @@
     "message": "Main",
     "description": "The ARIA label for the main navigation"
   },
-  "theme.navbar.mobileLanguageDropdown.label": {
-    "message": "Sprachen",
-    "description": "The label for the mobile language switcher dropdown"
-  },
   "theme.NotFound.p1": {
     "message": "Wir konnten nicht finden, wonach Sie gesucht haben.",
     "description": "The first paragraph of the 404 page"
@@ -198,9 +194,17 @@
     "message": "Bitte kontaktieren Sie den Besitzer der Seite, die Sie mit der ursprünglichen URL verlinkt hat, und teilen Sie ihm mit, dass der Link nicht mehr funktioniert.",
     "description": "The 2nd paragraph of the 404 page"
   },
+  "theme.navbar.mobileLanguageDropdown.label": {
+    "message": "Sprachen",
+    "description": "The label for the mobile language switcher dropdown"
+  },
   "theme.TOCCollapsible.toggleButtonLabel": {
     "message": "Auf dieser Seite",
     "description": "The label used by the button on the collapsible TOC component"
+  },
+  "theme.blog.post.readingTime.plurals": {
+    "message": "Eine Minute Lesezeit|{readingTime} Minuten Lesezeit",
+    "description": "Pluralized label for \"{readingTime} min read\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.blog.post.readMore": {
     "message": "Mehr lesen",
@@ -209,10 +213,6 @@
   "theme.blog.post.readMoreLabel": {
     "message": "Mehr lesen über {title}",
     "description": "The ARIA label for the link to full blog posts from excerpts"
-  },
-  "theme.blog.post.readingTime.plurals": {
-    "message": "Eine Minute Lesezeit|{readingTime} Minuten Lesezeit",
-    "description": "Pluralized label for \"{readingTime} min read\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.CodeBlock.copy": {
     "message": "Kopieren",
@@ -325,5 +325,69 @@
   "theme.tags.tagsPageTitle": {
     "message": "Tags",
     "description": "The title of the tag list page"
+  },
+  "homepage.subtitle": {
+    "message": "Haptische Navigation Wirklichkeit gemacht, damit Sie sich intuitiv zurechtfinden.",
+    "description": "The homepage subtitle"
+  },
+  "homepage.buttonText": {
+    "message": "Schauen Sie sich unsere Dokumentationsseiten an",
+    "description": "The text of the main button on the homepage"
+  },
+  "team.title": {
+    "message": "Team",
+    "description": "Team page title"
+  },
+  "team.heading": {
+    "message": "Team Haptigation",
+    "description": "Team page heading"
+  },
+  "team.intro": {
+    "message": "Team Haptigation besteht aus leidenschaftlichen Personen, die sich der Revolution der Navigation durch haptische Technologie verschrieben haben.",
+    "description": "Team page introduction"
+  },
+  "team.role.projectLead": {
+    "message": "Projektleiter",
+    "description": "Role title for project lead"
+  },
+  "team.role.eventManager": {
+    "message": "Event Manager",
+    "description": "Role title for event manager"
+  },
+  "team.role.designLead": {
+    "message": "Design-Leiter",
+    "description": "Role title for design lead"
+  },
+  "team.role.frontendDeveloper": {
+    "message": "Frontend-Entwickler",
+    "description": "Role title for frontend developer"
+  },
+  "team.role.backendDeveloper": {
+    "message": "Backend-Entwickler",
+    "description": "Role title for backend developer"
+  },
+  "team.desc.sanny": {
+    "message": "Er verwaltet nicht nur die Roadmap; er verkörpert die Vision des Produkts. Er fungiert als zentrales Nervensystem des Projekts und räumt aktiv den Weg für sein Team frei, sei es durch das Umschreiben von Anforderungen um Mitternacht oder eigenständiges Programmieren.",
+    "description": "Description for Sanny"
+  },
+  "team.desc.lightray": {
+    "message": "Er sagt nicht nur die Zukunft voraus; er skizziert sie. Für ihn ist eine Produktstrategie keine Tabelle mit Funktionen, sondern eine zusammenhängende Erzählung, die durch Interaktion und Ästhetik vermittelt wird. Während andere sich nur auf A/B-Tests verlassen, verlässt er sich auf geschulte Intuition und Empathie.",
+    "description": "Description for LightRay"
+  },
+  "team.desc.josis": {
+    "message": "Sie erstellt nicht nur Designs; sie kreiert Erlebnisse. Ihre Arbeit geht über Ästhetik hinaus und konzentriert sich darauf, wie Benutzer sich fühlen und mit dem Produkt interagieren. Sie glaubt, dass gutes Design unsichtbar ist und sich nahtlos in die Reise des Benutzers einfügt.",
+    "description": "Description for josis"
+  },
+  "team.desc.jack": {
+    "message": "Jack ist unser Frontend-Zauberer und verwandelt komplexe Designs in nahtlose Benutzererfahrungen. Mit einem scharfen Auge fürs Detail und einer Leidenschaft für responsives Design stellt er sicher, dass unsere Anwendungen auf jedem Gerät beeindruckend aussehen. Wenn er nicht gerade programmiert, schreibt Jack gerne unsere Docusaurus-Dokumentation.",
+    "description": "Description for Jack"
+  },
+  "team.desc.dave": {
+    "message": "Dave ist das Rückgrat unseres Entwicklungsteams und spezialisiert sich auf robuste und skalierbare Backend-Lösungen. Seine Expertise in Cluster-Lösungen stellt sicher, dass unsere Systeme unter Druck reibungslos laufen. Außerhalb der Arbeit ist David ein begeisterter Kletterer und liebt es, die Natur zu erkunden.",
+    "description": "Description for Dave"
+  },
+  "team.desc.rocco": {
+    "message": "Rocco ist ein Backend-Entwickler mit einem Händchen für die Optimierung der Server-Performance und Datenbankverwaltung. Er ist leidenschaftlich daran interessiert, effiziente Systeme zu bauen, die hohen Traffic problemlos bewältigen können. In seiner Freizeit trainiert Rocco gerne im Fitnessstudio und experimentiert mit neuen Kochrezepten.",
+    "description": "Description for Rocco"
   }
 }

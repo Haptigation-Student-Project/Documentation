@@ -1,82 +1,102 @@
 {
   "version.label": {
     "message": "Next",
-    "description": "The label for version current"
+    "description": "Das Label für die aktuelle Version"
   },
   "sidebar.documentationSidebar.category.General Info": {
-    "message": "General Info",
-    "description": "The label for category 'General Info' in sidebar 'documentationSidebar'"
+    "message": "Allgemeine Informationen",
+    "description": "Das Label für die Kategorie 'Allgemeine Informationen' in der Seitenleiste 'documentationSidebar'"
   },
   "sidebar.documentationSidebar.category.General Info.link.generated-index.description": {
-    "message": "The following pages include organisational structure, guidelines and informations on \"Haptigation\" - Feel free to explore!",
-    "description": "The generated-index page description for category 'General Info' in sidebar 'documentationSidebar'"
+    "message": "Die folgenden Seiten enthalten Organisationsstruktur, Richtlinien und Informationen zu \"Haptigation\" - Erkunden Sie gerne!",
+    "description": "Die generierte Index-Seitenbeschreibung für die Kategorie 'Allgemeine Informationen' in der Seitenleiste 'documentationSidebar'"
   },
   "sidebar.documentationSidebar.category.Hardware": {
     "message": "Hardware",
-    "description": "The label for category 'Hardware' in sidebar 'documentationSidebar'"
+    "description": "Das Label für die Kategorie 'Hardware' in der Seitenleiste 'documentationSidebar'"
   },
   "sidebar.documentationSidebar.category.Hardware.link.generated-index.description": {
-    "message": "Here you can find all information about the hardware prototypes developed for haptigation released to public.",
-    "description": "The generated-index page description for category 'Hardware' in sidebar 'documentationSidebar'"
+    "message": "Hier finden Sie alle Informationen über die für Haptigation entwickelten Hardware-Prototypen, die veröffentlicht wurden.",
+    "description": "Die generierte Index-Seitenbeschreibung für die Kategorie 'Hardware' in der Seitenleiste 'documentationSidebar'"
   },
   "sidebar.documentationSidebar.category.Prototypes": {
-    "message": "Prototypes",
-    "description": "The label for category 'Prototypes' in sidebar 'documentationSidebar'"
+    "message": "Prototypen",
+    "description": "Das Label für die Kategorie 'Prototypen' in der Seitenleiste 'documentationSidebar'"
   },
   "sidebar.documentationSidebar.category.Prototypes.link.generated-index.description": {
-    "message": "All hardware prototypes developed for the Haptigation project.",
-    "description": "The generated-index page description for category 'Prototypes' in sidebar 'documentationSidebar'"
+    "message": "Alle Hardware-Prototypen, die für das Haptigation-Projekt entwickelt wurden.",
+    "description": "Die generierte Index-Seitenbeschreibung für die Kategorie 'Prototypen' in der Seitenleiste 'documentationSidebar'"
   },
   "sidebar.documentationSidebar.category.Software": {
     "message": "Software",
-    "description": "The label for category 'Software' in sidebar 'documentationSidebar'"
+    "description": "Das Label für die Kategorie 'Software' in der Seitenleiste 'documentationSidebar'"
   },
   "sidebar.documentationSidebar.category.Software.link.generated-index.description": {
-    "message": "The Software Documentation is coming as soon as we have intel to share with you :)",
-    "description": "The generated-index page description for category 'Software' in sidebar 'documentationSidebar'"
+    "message": "Die Software-Dokumentation kommt, sobald wir Informationen mit Ihnen teilen können :)",
+    "description": "Die generierte Index-Seitenbeschreibung für die Kategorie 'Software' in der Seitenleiste 'documentationSidebar'"
   },
   "sidebar.documentationSidebar.category.Frontend": {
     "message": "Frontend",
-    "description": "The label for category 'Frontend' in sidebar 'documentationSidebar'"
+    "description": "Das Label für die Kategorie 'Frontend' in der Seitenleiste 'documentationSidebar'"
   },
   "sidebar.documentationSidebar.category.Frontend.link.generated-index.description": {
-    "message": "Here you can find all documentation related to our frontend.",
-    "description": "The generated-index page description for category 'Frontend' in sidebar 'documentationSidebar'"
+    "message": "Hier finden Sie die gesamte Dokumentation zu unserem Frontend.",
+    "description": "Die generierte Index-Seitenbeschreibung für die Kategorie 'Frontend' in der Seitenleiste 'documentationSidebar'"
+  },
+  "sidebar.documentationSidebar.category.Components": {
+    "message": "Komponenten",
+    "description": "Das Label für die Kategorie 'Komponenten' in der Seitenleiste 'documentationSidebar'"
+  },
+  "sidebar.documentationSidebar.category.Design Decisions": {
+    "message": "Design-Entscheidungen",
+    "description": "Das Label für die Kategorie 'Design-Entscheidungen' in der Seitenleiste 'documentationSidebar'"
+  },
+  "sidebar.documentationSidebar.category.Functionalities": {
+    "message": "Funktionalitäten",
+    "description": "Das Label für die Kategorie 'Funktionalitäten' in der Seitenleiste 'documentationSidebar'"
   },
   "sidebar.documentationSidebar.category.Backend": {
     "message": "Backend",
-    "description": "The label for category 'Backend' in sidebar 'documentationSidebar'"
+    "description": "Das Label für die Kategorie 'Backend' in der Seitenleiste 'documentationSidebar'"
   },
   "sidebar.documentationSidebar.category.Backend.link.generated-index.description": {
-    "message": "Here you can find all documentation related to our backend.",
-    "description": "The generated-index page description for category 'Backend' in sidebar 'documentationSidebar'"
+    "message": "Hier finden Sie die gesamte Dokumentation zu unserem Backend.",
+    "description": "Die generierte Index-Seitenbeschreibung für die Kategorie 'Backend' in der Seitenleiste 'documentationSidebar'"
   },
   "sidebar.documentationSidebar.category.Bluetooth": {
     "message": "Bluetooth",
-    "description": "The label for category 'Bluetooth' in sidebar 'documentationSidebar'"
+    "description": "Das Label für die Kategorie 'Bluetooth' in der Seitenleiste 'documentationSidebar'"
+  },
+  "sidebar.documentationSidebar.category.Bluetooth.link.generated-index.description": {
+    "message": "Hier finden Sie die gesamte Dokumentation zu unserem Bluetooth-Backend einschließlich Forschung.",
+    "description": "Die generierte Index-Seitenbeschreibung für die Kategorie 'Bluetooth' in der Seitenleiste 'documentationSidebar'"
   },
   "sidebar.documentationSidebar.category.Research": {
-    "message": "Research",
-    "description": "The label for category 'Research' in sidebar 'documentationSidebar'"
+    "message": "Forschung",
+    "description": "Das Label für die Kategorie 'Forschung' in der Seitenleiste 'documentationSidebar'"
   },
   "sidebar.documentationSidebar.category.Research.link.generated-index.description": {
-    "message": "Here you can find all documentation related to research topics.",
-    "description": "The generated-index page description for category 'Research' in sidebar 'documentationSidebar'"
+    "message": "Hier finden Sie die gesamte Dokumentation zu Forschungsthemen.",
+    "description": "Die generierte Index-Seitenbeschreibung für die Kategorie 'Forschung' in der Seitenleiste 'documentationSidebar'"
+  },
+  "sidebar.documentationSidebar.category.Google Integration": {
+    "message": "Google-Integration",
+    "description": "Das Label für die Kategorie 'Google-Integration' in der Seitenleiste 'documentationSidebar'"
   },
   "sidebar.documentationSidebar.category.Google Maps API": {
     "message": "Google Maps API",
-    "description": "The label for category 'Google Maps API' in sidebar 'documentationSidebar'"
+    "description": "Das Label für die Kategorie 'Google Maps API' in der Seitenleiste 'documentationSidebar'"
   },
   "sidebar.documentationSidebar.category.Google Maps API.link.generated-index.description": {
-    "message": "Here you can find all documentation related to Google Maps API (https://developers.google.com/maps).",
-    "description": "The generated-index page description for category 'Google Maps API' in sidebar 'documentationSidebar'"
+    "message": "Hier finden Sie die gesamte Dokumentation zur Google Maps API (https://developers.google.com/maps).",
+    "description": "Die generierte Index-Seitenbeschreibung für die Kategorie 'Google Maps API' in der Seitenleiste 'documentationSidebar'"
   },
   "sidebar.documentationSidebar.category.Google Apps Script": {
     "message": "Google Apps Script",
-    "description": "The label for category 'Google Apps Script' in sidebar 'documentationSidebar'"
+    "description": "Das Label für die Kategorie 'Google Apps Script' in der Seitenleiste 'documentationSidebar'"
   },
   "sidebar.documentationSidebar.category.Google Apps Script.link.generated-index.description": {
-    "message": "Here you can find all documentation related to Google Apps Script (https://script.google.com/). Gmail made professional.",
-    "description": "The generated-index page description for category 'Google Apps Script' in sidebar 'documentationSidebar'"
+    "message": "Hier finden Sie die gesamte Dokumentation zu Google Apps Script (https://script.google.com/). Gmail professionell gemacht.",
+    "description": "Die generierte Index-Seitenbeschreibung für die Kategorie 'Google Apps Script' in der Seitenleiste 'documentationSidebar'"
   }
 }

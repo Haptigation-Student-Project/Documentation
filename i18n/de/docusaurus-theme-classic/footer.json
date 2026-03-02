@@ -1,6 +1,6 @@
 {
   "link.title.Documentation": {
-    "message": "Documentation",
+    "message": "Dokumentation",
     "description": "The title of the footer links column with title=Documentation in the footer"
   },
   "link.title.Docusaurus": {
@@ -8,7 +8,7 @@
     "description": "The title of the footer links column with title=Docusaurus in the footer"
   },
   "link.title.References": {
-    "message": "References",
+    "message": "Referenzen",
     "description": "The title of the footer links column with title=References in the footer"
   },
   "link.item.label.Start": {
@@ -52,7 +52,7 @@
     "description": "The label of footer link with label=GitHub linking to https://github.com/facebook/docusaurus"
   },
   "copyright": {
-    "message": "Copyright © 2026 Haptigation. Built with Docusaurus.",
+    "message": "Copyright © 2026 Haptigation. Erstellt mit Docusaurus.",
     "description": "The footer copyright"
   }
 }

@@ -1,8 +1,8 @@
 {
     "label": "Hardware",
-    "position": 3,
+    "position": 2,
     "link": {
         "type": "generated-index",
-        "description": "Here you can find all information about the hardware prototypes developed for haptigation released to public."
+        "description": "All hardware prototypes developed for the Haptigation project."
     }
 }

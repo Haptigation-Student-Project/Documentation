@@ -2,7 +2,7 @@
 title: Bluetooth data Format
 description: Information on what data we send to the ESP32 to control the vibrations
 hide_table_of_contents: false
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 # Bluetooth data Format
@@ -36,7 +36,7 @@ Markdown
 - `0x40`: **Dual** - Reserved
 - `0x41`: **Dual** - U-Turn (Simultaneous)
 
-Compare patterns [here](/docs/Hardware/Prototypes/dual-wristband)
+Compare patterns [here](/docs/Hardware/dual-wristband)
 
 ## Target
 
