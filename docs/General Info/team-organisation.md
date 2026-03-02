@@ -1,6 +1,6 @@
 ---
 title: Team Organisation
-sidebar_position: 4
+sidebar_position: 5
 description: "Info and Guidelines on how we organise ourself as a team"
 
 ---

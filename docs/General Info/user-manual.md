@@ -1,6 +1,6 @@
 ---
 title: User Manual
-sidebar_position: 1
+sidebar_position: 3
 description: "Complete user manual for the Haptigation navigation system"
 ---
 
