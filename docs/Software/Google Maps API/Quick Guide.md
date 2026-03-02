@@ -10,7 +10,7 @@ sidebar_position: 1
 1. [Clone Github repository](https://github.com/Haptigation-Student-Project/Software)
 2. Write a message to Jack-gits-your-hub to get access:
     - The message must contain these things:
-        - The packagename of our application ('com.example.haptigationsw') --> can be found in 'AndroidManifest.xml' or module:app 'build.gradle.kts'
+        - The packagename of our application ('com.example.haptigationsw') --> can be found in or module:app 'build.gradle.kts'
         - Your personal SHA1 debugging key:
             1. Open the project within Android Studio and go to settings, experimental
             2. Click on the option 'Configure all Gradle Tasks during Gradle Sync' and save the settings
