@@ -9,7 +9,6 @@ sidebar_position: 2
 For confidentiality reasons, no code will be shared but the used patterns.
 
 ## Example patterns
-## Example patterns
 ```python
 # Regular patterns to play on only one motor
 single_motor_patterns = {
