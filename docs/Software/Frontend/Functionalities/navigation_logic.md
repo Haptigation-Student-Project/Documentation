@@ -12,9 +12,9 @@ This section describes the logic within `RouteFragment` that handles the transit
 
 When the user starts the navigation, we toggle the visibility of the UI components. This is handled in `startFullNavigation`.
 
-## 2. Adapter Integration (`StepsAdapter.kt`)
+## 2. Adapter Integration
 
-The adapter renders the HTML instructions. **Crucial:** We use `Html.fromHtml` to display bold text (street names) provided by Google.
+The adapter renders the HTML instructions. We use `Html.fromHtml` to display bold text (street names) provided by Google.
 
 ## 3. Implementation in Route Fragment. 
 

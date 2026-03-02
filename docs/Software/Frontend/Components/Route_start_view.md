@@ -15,7 +15,7 @@ This guide covers how the map-based navigation was extended to a list-based view
 
 To switch between the map and the navigation list, we use a `RecyclerView` that overlaps the `FragmentContainerView`.
 
-### Layout Integration (`fragment_route.xml`)
+### Layout Integration
 
 The `RecyclerView` is placed inside the `ConstraintLayout` and is hidden by default (`visibility="gone"`).
 
