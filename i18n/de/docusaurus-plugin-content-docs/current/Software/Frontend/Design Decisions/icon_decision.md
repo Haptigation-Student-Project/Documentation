@@ -4,7 +4,7 @@ description: Dokumentation zur Designentscheidung der Icons
 hide_table_of_contents: false
 sidebar_position: 3
 ---
-Icons einfach zu verstehen und minimalistisch sein. Wir wollten auch unser Farbthema beibehalten und es für die Icons wiederverwenden.
+Icons sollten einfach zu verstehen und minimalistisch sein. Wir wollten auch unser Farbthema beibehalten und es für die Icons wiederverwenden.
 Deshalb ist unsere Wahl für Icons bewusst minimalistisch:
 
 Ein Beispiel findet sich bereits auf den Onboarding-Seiten:

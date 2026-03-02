@@ -31,6 +31,7 @@ The following table will aid in assigning an estimate (in Story Points) to our i
 | **5** | Medium | ~ 1 Day | Major module, PCB layout, complex assembly. |
 | **8** | Large | ~ 2 Days | **Warning zone.** Integrations or complex algorithms. |
 | **13** | Epic | > 2 Days | **STOP.** Too big. Split into smaller tasks immediately. |
+
 ### Creating Issues
 When creating an issue, describe it in a way that everyone understands why it exists and what needs to be done by giving as much context as possible and linking relevant documentation and issues.
 
@@ -49,16 +50,18 @@ Since the Sprints we use are only rough timeframes to document our progress, any
 ## Project Board
 We organize our issues on a central project board on GitHub.
 ### Status
-#### 📋Todo 
+#### Backlog
+A collection of tasks that are on hold, future improvements or future sprint stuff.
+#### Todo 
 A Task that is ready to be worked on. People may reserve issues for themselves (preference), but anyone can still pick them up and work on them. Make sure the assigned person has not yet started working and forgot to update the status!
 
 DON'T reserve tasks when you have plenty of things to do and won't start working on them any time soon.
-#### 🛠️In Progress
+#### In Progress
 Something is cooking! Someone has started working on this task.
 If you are absent for some time, please hand the task over to someone else, so it can be worked on by someone else while you're gone.
-#### ✅Done
+#### Done
 The task is finished. Go get some coffee ☕
-#### ♾️ Continuous
+#### Continuous
 Anything that is sort of always in progress. Serves more of a reminder or something.
 ### Labels
 These help us break things down into categories. Remember, that Issues also belong to Repositories, so you don't really have to label something as "documentation" when the issue is in the documentation repo. Use those repos as the "Domain"
